@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
-#include "C:\Users\pavip\Desktop\Universidad\IG1\Práctica2\FallingSquare.h"
+#include "../FallingSquare.h"
 #include <vector>
 
 class ofApp : public ofBaseApp{
@@ -11,9 +11,11 @@ class ofApp : public ofBaseApp{
 		ofRectangle platform;
 		vector<FallingSquare> squares;
 		ofTrueTypeFont puntuacion;
+		vector<FallingSquare>::iterator itFirstSquare;
 		int points;
 		int deltaTime;
 		bool generar;
+		bool lose;
 
 
 		void setup();

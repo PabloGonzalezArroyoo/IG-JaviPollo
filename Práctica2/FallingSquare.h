@@ -7,6 +7,8 @@ class FallingSquare
 private:
 	ofRectangle square;
 	int color;
+	float xMoveFactor;
+	float speed;
 
 public:
 	FallingSquare(int posX) {
@@ -17,10 +19,14 @@ public:
 
 		int random = ofRandom(0, 2);
 		color = random;
+		xMoveFactor = ofRandom(-1, 2) / 4;
+
+		speed = 1.5;
 	}
 
 	void move() {
-		square.position.y += 1;
+		square.position.y += speed;
+		square.position.x += xMoveFactor;
 	}
 
 	ofRectangle getSquare() { return square; }
