@@ -16,7 +16,7 @@ public:
 
 	// Constructoras
 	Transform();
-	Transform(ofVec2f _pos, ofVec2f _vel, int _width, int _height, float _rotation = 0);
+	Transform(ofVec2f _pos, int _width, int _height, ofVec2f _vel = ofVec2f(), float _rotation = 0);
 
 	// Movimiento
 	virtual void update();

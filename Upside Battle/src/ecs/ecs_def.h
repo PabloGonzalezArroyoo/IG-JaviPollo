@@ -8,6 +8,8 @@ using cmpId_type = unsigned int;
 enum cmpId : cmpId_type {
 	_TRANSFORM,
 	_HEALTH,
+	_BLOCK,
+	_INPUT,
 
 	//DO NOT REMOVE THIS
 	_LAST_CMP_ID

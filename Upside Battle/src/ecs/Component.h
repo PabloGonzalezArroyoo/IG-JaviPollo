@@ -1,6 +1,7 @@
 #pragma once
 #include "ecs_def.h"
 #include "ofMain.h"
+#include "ofxBox2d.h"
 
 using namespace std;
 

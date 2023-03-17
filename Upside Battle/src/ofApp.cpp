@@ -1,5 +1,7 @@
 #include "ofApp.h"
+#include "ofxBox2d.h"
 #include "components/Transform.h"
+#include "components/BlockComponent.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -13,23 +15,25 @@ void ofApp::setup(){
 
 	mngr = new Manager();
 	player = mngr->addEntity();
-	player->addComponent<Transform>();
-	
+	player->addComponent<Transform>(ofVec2f(200, 200), 20, 20, ofVec2f(0, 1));
+	player->addComponent<BlockComponent>(&bounds);
+	plOneInput = player->addComponent<InputComponent>();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+	bounds.update();
+	mngr->update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+	mngr->render();
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+	plOneInput->handleInput(key);
 }
 
 //--------------------------------------------------------------

@@ -4,6 +4,7 @@
 #include "ofxBox2d.h"
 #include "ecs/Manager.h"
 #include "ecs/Entity.h"
+#include "components/InputComponent.h"
 
 class ofApp : public ofBaseApp {
 
@@ -28,4 +29,5 @@ class ofApp : public ofBaseApp {
 
 		Manager* mngr;
 		Entity* player;
+		InputComponent* plOneInput;
 };

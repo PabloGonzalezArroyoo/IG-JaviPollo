@@ -253,6 +253,9 @@
     <ClCompile Include="src\ecs\Manager.cpp">
       <Filter>src\SOURCE\ecs</Filter>
     </ClCompile>
+    <ClCompile Include="src\components\InputComponent.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -630,6 +633,12 @@
       <Filter>src\HEADERS\components</Filter>
     </ClInclude>
     <ClInclude Include="src\components\HealthComponent.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\BlockComponent.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\InputComponent.h">
       <Filter>src\HEADERS\components</Filter>
     </ClInclude>
   </ItemGroup>
