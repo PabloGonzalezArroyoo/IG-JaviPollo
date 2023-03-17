@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2d.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dBaseShape.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dCircle.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dConvexPoly.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dEdge.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dParticleSystem.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dPolygon.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dPolygonUtils.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dRect.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dRender.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dUtils.cpp">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2BroadPhase.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2CollideCircle.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2CollideEdge.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2CollidePolygon.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2Collision.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2Distance.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2DynamicTree.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2TimeOfImpact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2ChainShape.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2CircleShape.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2EdgeShape.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2PolygonShape.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2BlockAllocator.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Draw.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2FreeList.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Math.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Settings.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2StackAllocator.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Stat.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Timer.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2TrackedBlock.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2Body.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2ContactManager.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2Fixture.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2Island.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2World.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2WorldCallbacks.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2CircleContact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2Contact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2ContactSolver.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2PolygonContact.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2DistanceJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2FrictionJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2GearJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2Joint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2MotorJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2MouseJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2PrismaticJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2PulleyJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2RevoluteJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2RopeJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2WeldJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2WheelJoint.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2Particle.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2ParticleAssembly.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2ParticleGroup.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2ParticleSystem.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2VoronoiDiagram.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Rope\b2Rope.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Rope</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition\b2Polygon.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition\b2Triangle.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Triangle\triangle.cpp">
+      <Filter>addons\ofxBox2d-Physics\libs\Triangle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxBaseGui.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxButton.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxColorPicker.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxGuiGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxInputField.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxLabel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxPanel.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSlider.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSliderGroup.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxToggle.cpp">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\HealthComponent.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\Transform.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ecs\Manager.cpp">
+      <Filter>src\SOURCE\ecs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics">
+      <UniqueIdentifier>{02792E8C-CC0A-1769-0A6F-C5AB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\src">
+      <UniqueIdentifier>{B8A49C4F-6E05-3F58-3D4B-FDE2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs">
+      <UniqueIdentifier>{35F2E152-86E0-4285-7D74-5683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D">
+      <UniqueIdentifier>{FFFE93DB-B82F-0A16-8A35-97DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Collision">
+      <UniqueIdentifier>{50FDDFEC-309E-DF12-23D9-D2D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes">
+      <UniqueIdentifier>{89B8BC30-2DD0-58ED-831F-0407}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Common">
+      <UniqueIdentifier>{DE913FE9-1436-CF68-B25C-4A95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Dynamics">
+      <UniqueIdentifier>{8880E66D-BE46-6141-9A43-B03F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts">
+      <UniqueIdentifier>{D304FBD5-FF71-77D3-CF20-29B3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints">
+      <UniqueIdentifier>{110AAEF7-59B8-A14E-A468-5463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Particle">
+      <UniqueIdentifier>{3818029D-4DEE-890E-64ED-12A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Box2D\Rope">
+      <UniqueIdentifier>{196D5352-0F2D-666B-5940-7DDF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\liquidfun">
+      <UniqueIdentifier>{A661E111-9BF5-F150-FAB3-0E32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\liquidfun\Contributions">
+      <UniqueIdentifier>{E0B4FB4F-EF87-7133-E3C9-FE08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Enhancements">
+      <UniqueIdentifier>{30DE1905-8F3E-27EB-0565-34E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Enhancements\FixedPoint">
+      <UniqueIdentifier>{343A63CB-31B2-AC00-684E-F355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities">
+      <UniqueIdentifier>{36327564-19AC-7E17-2245-7838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition">
+      <UniqueIdentifier>{571D1CB1-C888-20F7-D54F-D180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBox2d-Physics\libs\Triangle">
+      <UniqueIdentifier>{1DEC3F34-F2DD-EAA7-B05E-4C9C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui">
+      <UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxGui\src">
+      <UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HEADERS">
+      <UniqueIdentifier>{53533771-8b26-4bf4-be20-26d6ee2606e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SOURCE">
+      <UniqueIdentifier>{d8b496ad-d5e7-4d0d-9ed3-36ee36671539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HEADERS\ecs">
+      <UniqueIdentifier>{d4a411b9-8894-4f07-bb04-157c647edcf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HEADERS\components">
+      <UniqueIdentifier>{641c966a-d1ca-44d9-bb74-d068fe74d8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SOURCE\components">
+      <UniqueIdentifier>{955f49e7-6f70-4886-9904-82a2203e10a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SOURCE\ecs">
+      <UniqueIdentifier>{f456d585-f735-4fda-826d-97b944f39479}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2d.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dBaseShape.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dCircle.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dContactListener.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dConvexPoly.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dEdge.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dJoint.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dParticleSystem.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dPolygon.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dPolygonUtils.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dRect.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dRender.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dUtils.h">
+      <Filter>addons\ofxBox2d-Physics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Box2D.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2BroadPhase.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2Collision.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2Distance.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2DynamicTree.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\b2TimeOfImpact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2ChainShape.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2CircleShape.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2EdgeShape.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2PolygonShape.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes\b2Shape.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Collision\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2BlockAllocator.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Draw.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2FreeList.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2GrowableBuffer.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2GrowableStack.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2IntrusiveList.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Math.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Settings.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2SlabAllocator.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2StackAllocator.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Stat.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2Timer.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Common\b2TrackedBlock.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2Body.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2ContactManager.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2Fixture.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2Island.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2TimeStep.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2World.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\b2WorldCallbacks.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2CircleContact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2Contact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2ContactSolver.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts\b2PolygonContact.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Contacts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2DistanceJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2FrictionJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2GearJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2Joint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2MotorJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2MouseJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2PrismaticJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2PulleyJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2RevoluteJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2RopeJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2WeldJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints\b2WheelJoint.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Dynamics\Joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2Particle.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2ParticleAssembly.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2ParticleGroup.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2ParticleSystem.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2StackQueue.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Particle\b2VoronoiDiagram.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Box2D\Rope\b2Rope.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Box2D\Rope</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Enhancements\FixedPoint\Fixed.h">
+      <Filter>addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Enhancements\FixedPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Enhancements\FixedPoint\jtypes.h">
+      <Filter>addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Enhancements\FixedPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition\b2Polygon.h">
+      <Filter>addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition\b2Triangle.h">
+      <Filter>addons\ofxBox2d-Physics\libs\liquidfun\Contributions\Utilities\ConvexDecomposition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\libs\Triangle\triangle.h">
+      <Filter>addons\ofxBox2d-Physics\libs\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxBaseGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxButton.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxColorPicker.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxGui.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxGuiGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxGuiUtils.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxInputField.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxLabel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxPanel.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSlider.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSliderGroup.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxToggle.h">
+      <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ecs\Component.h">
+      <Filter>src\HEADERS\ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ecs\ecs_def.h">
+      <Filter>src\HEADERS\ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ecs\Entity.h">
+      <Filter>src\HEADERS\ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ecs\Manager.h">
+      <Filter>src\HEADERS\ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\Transform.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\HealthComponent.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>
