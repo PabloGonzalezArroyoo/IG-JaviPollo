@@ -256,6 +256,9 @@
     <ClCompile Include="src\components\InputComponent.cpp">
       <Filter>src\SOURCE\components</Filter>
     </ClCompile>
+    <ClCompile Include="src\components\UIComponent.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -639,6 +642,9 @@
       <Filter>src\HEADERS\components</Filter>
     </ClInclude>
     <ClInclude Include="src\components\InputComponent.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\UIComponent.h">
       <Filter>src\HEADERS\components</Filter>
     </ClInclude>
   </ItemGroup>

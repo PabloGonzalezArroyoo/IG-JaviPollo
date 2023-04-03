@@ -8,12 +8,20 @@ class InputComponent : public Component{
 private:
 	Transform* tr;
 	BlockComponent* rect;
+	float speedLimit = 2;
+
+	int keyIds[4];
+	bool keys[4];
 
 public:
 	static constexpr int id = _INPUT;
 
-	virtual void initComponent();
+	InputComponent(int keyLeft, int keyRight, int keyUp, int keyDown);
 
-	void handleInput(int key);
+	virtual void initComponent();
+	virtual void update();
+
+	void keyPressed(int key);
+	void keyReleased(int key);
 };
 

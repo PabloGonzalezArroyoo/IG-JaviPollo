@@ -1,5 +1,6 @@
 #pragma once
 #include "../ecs/Component.h"
+#include "../ecs/Entity.h"
 
 class Transform : public Component {
 private:
@@ -22,7 +23,7 @@ public:
 	virtual void update();
 
 	// Setters
-	inline void setPosition(ofVec2f _pos) { pos = _pos; };
+	inline void setPosition(ofVec2f _pos) { pos = _pos;  };
 	inline void setVelocity(ofVec2f _vel) { vel = _vel; };
 	inline void setRotation(float _rotation) { rotation = _rotation; }
 	inline void setWidth(int _width) { width = _width; }
@@ -34,4 +35,6 @@ public:
 	inline float getRotation() { return rotation; }
 	inline int getWidth() { return width; }
 	inline int getHeight() { return height; }
+
+	inline int velocityMagnitude(ofVec2f _vel) { return sqrtf(powf(_vel.x, 2) + powf(_vel.y, 2)); }
 };

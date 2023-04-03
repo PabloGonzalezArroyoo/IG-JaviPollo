@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxBox2d.h"
 #include "ecs/Manager.h"
 #include "ecs/Entity.h"
 #include "components/InputComponent.h"
@@ -24,10 +23,16 @@ class ofApp : public ofBaseApp {
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
-		ofxBox2d bounds;
 
 		Manager* mngr;
-		Entity* player;
-		InputComponent* plOneInput;
+
+		// Jugador 1
+		Entity* playerOne;
+		InputComponent* inputOne;
+		Entity* playerOneUI;
+
+		// Jugador 2
+		Entity* playerTwo;
+		InputComponent* inputTwo;
+		Entity* playerTwoUI;
 };

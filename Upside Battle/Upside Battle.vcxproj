@@ -187,6 +187,7 @@
     <ClCompile Include="src\components\HealthComponent.cpp" />
     <ClCompile Include="src\components\InputComponent.cpp" />
     <ClCompile Include="src\components\Transform.cpp" />
+    <ClCompile Include="src\components\UIComponent.cpp" />
     <ClCompile Include="src\ecs\Manager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -275,6 +276,7 @@
     <ClInclude Include="src\components\HealthComponent.h" />
     <ClInclude Include="src\components\InputComponent.h" />
     <ClInclude Include="src\components\Transform.h" />
+    <ClInclude Include="src\components\UIComponent.h" />
     <ClInclude Include="src\ecs\Component.h" />
     <ClInclude Include="src\ecs\ecs_def.h" />
     <ClInclude Include="src\ecs\Entity.h" />

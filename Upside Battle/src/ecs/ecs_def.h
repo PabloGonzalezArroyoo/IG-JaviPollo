@@ -10,6 +10,7 @@ enum cmpId : cmpId_type {
 	_HEALTH,
 	_BLOCK,
 	_INPUT,
+	_UI,
 
 	//DO NOT REMOVE THIS
 	_LAST_CMP_ID
@@ -22,6 +23,7 @@ using grpId_type = unsigned int;
 
 enum grpId : grpId_type {
 	_grp_GENERAL,
+	_grp_UI,
 
 	//DO NOT REMOVE THIS
 	_LAST_GRP_ID

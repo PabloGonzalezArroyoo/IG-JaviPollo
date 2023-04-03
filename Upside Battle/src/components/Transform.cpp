@@ -9,5 +9,8 @@ Transform::Transform(ofVec2f _pos, int _width, int _height, ofVec2f _vel, float 
 
 // Muve la nave sumando a la posición la velocidad del objeto
 void Transform::update() {
-	pos = pos + vel;
+	ofVec2f newPos = pos + vel;
+	if (newPos.x < ofGetWidth() - width && newPos.x > 0 && newPos.y < ofGetHeight() - height && newPos.y > 0) {
+		pos = pos + vel;
+	}
 }
