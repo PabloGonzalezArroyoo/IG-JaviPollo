@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Constants.h"
+
 using namespace std;
 
 // COMPONENTES

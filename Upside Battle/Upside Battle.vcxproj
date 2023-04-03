@@ -278,6 +278,7 @@
     <ClInclude Include="src\components\Transform.h" />
     <ClInclude Include="src\components\UIComponent.h" />
     <ClInclude Include="src\ecs\Component.h" />
+    <ClInclude Include="src\ecs\Constants.h" />
     <ClInclude Include="src\ecs\ecs_def.h" />
     <ClInclude Include="src\ecs\Entity.h" />
     <ClInclude Include="src\ecs\Manager.h" />

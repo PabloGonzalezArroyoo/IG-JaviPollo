@@ -647,6 +647,9 @@
     <ClInclude Include="src\components\UIComponent.h">
       <Filter>src\HEADERS\components</Filter>
     </ClInclude>
+    <ClInclude Include="src\ecs\Constants.h">
+      <Filter>src\HEADERS\ecs</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

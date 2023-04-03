@@ -10,7 +10,7 @@ void UIComponent::initComponent() {
 	uiBox.width = tr->getWidth();
 	uiBox.height = tr->getHeight();
 
-	uiPoints.load("../../resources/Purple Smile.ttf", 20);
+	uiPoints.load("../../resources/phantomstorm.ttf", FONT_SIZE);
 }
 
 void UIComponent::render() {
@@ -21,7 +21,7 @@ void UIComponent::render() {
 	ofSetColor(0, 0, 0);
 	pointsString = "P" + to_string(player) + ": " + to_string(points);
 	uiPoints.drawString(pointsString,
-		uiBox.x + uiBox.width / 2 - uiPoints.stringWidth(pointsString) / 2, uiBox.y + uiBox.height / 2 + 20 / 2);
+		uiBox.x + uiBox.width / 2 - uiPoints.stringWidth(pointsString) / 2, uiBox.y + uiBox.height / 2 + FONT_SIZE / 2);
 
 	ofSetColor(255, 255, 255);
 }

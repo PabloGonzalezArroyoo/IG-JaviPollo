@@ -8,7 +8,6 @@ class InputComponent : public Component{
 private:
 	Transform* tr;
 	BlockComponent* rect;
-	float speedLimit = 2;
 
 	int keyIds[4];
 	bool keys[4];

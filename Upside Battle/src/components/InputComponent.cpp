@@ -6,7 +6,7 @@ InputComponent::InputComponent(int keyLeft, int keyRight, int keyUp, int keyDown
 	keyIds[2] = keyUp;
 	keyIds[3] = keyDown;
 
-	for (int i = 0; i < 4; i++) keys[i] = false;
+	for (int i = 0; i < NUMBER_OF_KEYS; i++) keys[i] = false;
 }
 
 void InputComponent::initComponent() {
@@ -15,10 +15,10 @@ void InputComponent::initComponent() {
 }
 
 void InputComponent::update() {
-	if (keys[0]) rect->move(ofVec2f(-1, 0) * speedLimit);
-	else if (keys[1]) rect->move(ofVec2f(1, 0) * speedLimit);
-	else if (keys[2]) rect->move(ofVec2f(0, -1) * speedLimit);
-	else if (keys[3]) rect->move(ofVec2f(0, 1) * speedLimit);
+	if (keys[0]) rect->move(ofVec2f(-1, 0) * SPEEDLIMIT);
+	else if (keys[1]) rect->move(ofVec2f(1, 0) * SPEEDLIMIT);
+	else if (keys[2]) rect->move(ofVec2f(0, -1) * SPEEDLIMIT);
+	else if (keys[3]) rect->move(ofVec2f(0, 1) * SPEEDLIMIT);
 }
 
 void InputComponent::keyPressed(int key) {
