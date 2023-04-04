@@ -13,6 +13,7 @@ enum cmpId : cmpId_type {
 	_BLOCK,
 	_INPUT,
 	_UI,
+	_COLLIDER,
 
 	//DO NOT REMOVE THIS
 	_LAST_CMP_ID
@@ -25,6 +26,10 @@ using grpId_type = unsigned int;
 
 enum grpId : grpId_type {
 	_grp_GENERAL,
+	_grp_BLOCK1,
+	_grp_BLOCK2,
+	_grp_WEAPONS,
+	_grp_BULLETS,
 	_grp_UI,
 
 	//DO NOT REMOVE THIS
@@ -44,3 +49,8 @@ enum hdlrId : hdlrId_type {
 };
 
 constexpr hdlrId_type maxHandlerId = _LAST_HDLR_ID;
+
+#include <functional>
+// Tipo de funcion que devuelve y recibe void, funciona tambion con funciones lambda con capturas
+class Entity;
+using CallBackCol = std::function<void(Entity*)>;

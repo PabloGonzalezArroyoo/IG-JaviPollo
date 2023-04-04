@@ -184,6 +184,7 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\components\ColliderComponent.cpp" />
     <ClCompile Include="src\components\HealthComponent.cpp" />
     <ClCompile Include="src\components\InputComponent.cpp" />
     <ClCompile Include="src\components\Transform.cpp" />
@@ -270,9 +271,11 @@
     <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="src\utils\Collisions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\components\BlockComponent.h" />
+    <ClInclude Include="src\components\ColliderComponent.h" />
     <ClInclude Include="src\components\HealthComponent.h" />
     <ClInclude Include="src\components\InputComponent.h" />
     <ClInclude Include="src\components\Transform.h" />
@@ -372,6 +375,7 @@
     <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="src\utils\Collisions.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
