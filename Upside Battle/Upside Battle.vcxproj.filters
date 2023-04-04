@@ -259,12 +259,6 @@
     <ClCompile Include="src\components\UIComponent.cpp">
       <Filter>src\SOURCE\components</Filter>
     </ClCompile>
-    <ClCompile Include="src\utils\Collisions.cpp">
-      <Filter>src\SOURCE\utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\components\ColliderComponent.cpp">
-      <Filter>src\SOURCE\components</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -353,12 +347,6 @@
     </Filter>
     <Filter Include="src\SOURCE\ecs">
       <UniqueIdentifier>{f456d585-f735-4fda-826d-97b944f39479}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\HEADERS\utils">
-      <UniqueIdentifier>{8b0ab2b1-87b8-43ff-923b-e77cdbff9347}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\SOURCE\utils">
-      <UniqueIdentifier>{4aaa2cdb-fa32-495d-a93b-303e67d40e74}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -661,12 +649,6 @@
     </ClInclude>
     <ClInclude Include="src\ecs\Constants.h">
       <Filter>src\HEADERS\ecs</Filter>
-    </ClInclude>
-    <ClInclude Include="src\utils\Collisions.h">
-      <Filter>src\HEADERS\utils</Filter>
-    </ClInclude>
-    <ClInclude Include="src\components\ColliderComponent.h">
-      <Filter>src\HEADERS\components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

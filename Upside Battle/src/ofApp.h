@@ -24,7 +24,11 @@ class ofApp : public ofBaseApp {
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+		// Manager
 		Manager* mngr;
+
+		// Mundo (the box2d world)
+		ofxBox2d box2d;
 
 		// Jugador 1
 		Entity* playerOne;

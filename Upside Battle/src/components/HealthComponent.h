@@ -13,7 +13,7 @@ private:
 	float invTime;
 	float time;
 
-	Transform* tr;
+	ofxBox2dRect* tr;
 	vector<ofRectangle> lifesHUD;
 
 public:
