@@ -184,10 +184,13 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\components\BlockComponent.cpp" />
+    <ClCompile Include="src\components\BulletComponent.cpp" />
     <ClCompile Include="src\components\HealthComponent.cpp" />
     <ClCompile Include="src\components\InputComponent.cpp" />
     <ClCompile Include="src\components\Transform.cpp" />
     <ClCompile Include="src\components\UIComponent.cpp" />
+    <ClCompile Include="src\components\WeaponComponent.cpp" />
     <ClCompile Include="src\ecs\Manager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -273,10 +276,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\components\BlockComponent.h" />
+    <ClInclude Include="src\components\BulletComponent.h" />
     <ClInclude Include="src\components\HealthComponent.h" />
     <ClInclude Include="src\components\InputComponent.h" />
     <ClInclude Include="src\components\Transform.h" />
     <ClInclude Include="src\components\UIComponent.h" />
+    <ClInclude Include="src\components\WeaponComponent.h" />
+    <ClInclude Include="src\ecs\CollisionListener.h" />
     <ClInclude Include="src\ecs\Component.h" />
     <ClInclude Include="src\ecs\Constants.h" />
     <ClInclude Include="src\ecs\ecs_def.h" />

@@ -4,6 +4,12 @@
 #include "ecs/Manager.h"
 #include "ecs/Entity.h"
 #include "components/InputComponent.h"
+#include "components/Transform.h"
+#include "components/BlockComponent.h"
+#include "components/UIComponent.h"
+#include "components/HealthComponent.h"
+#include "components/WeaponComponent.h"
+#include "ecs/CollisionListener.h"
 
 class ofApp : public ofBaseApp {
 
@@ -33,10 +39,12 @@ class ofApp : public ofBaseApp {
 		// Jugador 1
 		Entity* playerOne;
 		InputComponent* inputOne;
-		Entity* playerOneUI;
+		Entity* UIplayerOne;
+		Entity* weaponPlayerOne;
 
 		// Jugador 2
 		Entity* playerTwo;
 		InputComponent* inputTwo;
-		Entity* playerTwoUI;
+		Entity* UIplayerTwo;
+		Entity* weaponPlayerTwo;
 };

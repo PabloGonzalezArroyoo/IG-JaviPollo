@@ -259,6 +259,15 @@
     <ClCompile Include="src\components\UIComponent.cpp">
       <Filter>src\SOURCE\components</Filter>
     </ClCompile>
+    <ClCompile Include="src\components\WeaponComponent.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\BulletComponent.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\BlockComponent.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -649,6 +658,15 @@
     </ClInclude>
     <ClInclude Include="src\ecs\Constants.h">
       <Filter>src\HEADERS\ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\WeaponComponent.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ecs\CollisionListener.h">
+      <Filter>src\HEADERS\ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\BulletComponent.h">
+      <Filter>src\HEADERS\components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

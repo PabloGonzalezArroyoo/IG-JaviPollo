@@ -1,8 +1,4 @@
 #include "ofApp.h"
-#include "components/Transform.h"
-#include "components/BlockComponent.h"
-#include "components/UIComponent.h"
-#include "components/HealthComponent.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -14,6 +10,7 @@ void ofApp::setup(){
 	box2d.createBounds(0, ofGetHeight() / 7, ofGetWidth(), ofGetHeight() - ofGetHeight() / 7);
 	box2d.setFPS(60.0);
 	box2d.registerGrabbing();
+	box2d.getWorld()->SetContactListener(new CollisionListener);
 
 	// JUGADOR 1
 	// Entidad jugador
@@ -21,10 +18,13 @@ void ofApp::setup(){
 	playerOne->addComponent<BlockComponent>(&box2d, ofVec2f(200, 200), BLOCK_DIMS, BLOCK_DIMS, 1);
 	inputOne = playerOne->addComponent<InputComponent>(OF_KEY_LEFT, OF_KEY_RIGHT, OF_KEY_UP, OF_KEY_DOWN);
 	playerOne->addComponent<HealthComponent>(3);
+	playerOne->addComponent<WeaponComponent>();
 	// Interfaz
-	playerOneUI = mngr->addEntity(_grp_UI);
-	playerOneUI->addComponent<Transform>(ofVec2f(0, 0), ofGetWidth() / 2, ofGetHeight() / 7);
-	playerOneUI->addComponent<UIComponent>(1);
+	UIplayerOne = mngr->addEntity(_grp_UI);
+	UIplayerOne->addComponent<Transform>(ofVec2f(0, 0), ofGetWidth() / 2, ofGetHeight() / 7);
+	UIplayerOne->addComponent<UIComponent>(1);
+	// Arma
+	weaponPlayerOne = mngr->addEntity();
 
 	// JUGADOR 2
 	// Entidad jugador
@@ -33,9 +33,12 @@ void ofApp::setup(){
 	inputTwo = playerTwo->addComponent<InputComponent>('a', 'd', 'w', 's');
 	playerTwo->addComponent<HealthComponent>(3);
 	// Interfaz
-	playerTwoUI = mngr->addEntity(_grp_UI);
-	playerTwoUI->addComponent<Transform>(ofVec2f(ofGetWidth() / 2, 0), ofGetWidth() / 2, ofGetHeight() / 7);
-	playerTwoUI->addComponent<UIComponent>(2);
+	UIplayerTwo = mngr->addEntity(_grp_UI);
+	UIplayerTwo->addComponent<Transform>(ofVec2f(ofGetWidth() / 2, 0), ofGetWidth() / 2, ofGetHeight() / 7);
+	UIplayerTwo->addComponent<UIComponent>(2);
+	// Arma
+	weaponPlayerTwo = mngr->addEntity();
+	playerTwo->addComponent<WeaponComponent>();
 }
 
 //--------------------------------------------------------------
