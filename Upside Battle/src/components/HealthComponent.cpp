@@ -1,7 +1,8 @@
 #include "HealthComponent.h"
 #include "BlockComponent.h"
 
-HealthComponent::HealthComponent(int life, bool inv) : Component(), maxLife(life), invincibility(inv), lifePoints(life) { }
+HealthComponent::HealthComponent(int life, UIComponent* uc, bool inv) : Component(),
+maxLife(life), invincibility(inv), lifePoints(life), ui(uc), alive(true) { }
 
 void HealthComponent::initComponent() {
 	tr = myObj->getComponent<BlockComponent>()->getBody();
@@ -15,7 +16,12 @@ void HealthComponent::initComponent() {
 }
 
 void HealthComponent::receiveDamage(int damage) {
-	maxLife -= damage;
+	lifePoints -= damage;
+	if (lifePoints <= 0) {
+		die();
+		ui->updatePoints(3);
+	}
+	else ui->updatePoints(1);
 }
 
 void HealthComponent::update() {
@@ -37,5 +43,6 @@ void HealthComponent::render() {
 }
 
 void HealthComponent::die() {
-
+	lifePoints = maxLife;
+	alive = false;
 }

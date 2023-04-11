@@ -25,3 +25,7 @@ void UIComponent::render() {
 
 	ofSetColor(255, 255, 255);
 }
+
+void UIComponent::updatePoints(int pts) {
+	points += pts;
+}

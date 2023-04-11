@@ -18,7 +18,8 @@ public:
 	UIComponent(int p);
 
 	virtual void initComponent();
-
 	virtual void render();
+
+	void updatePoints(int points);
 };
 

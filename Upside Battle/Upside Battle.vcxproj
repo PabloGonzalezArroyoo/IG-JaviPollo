@@ -279,6 +279,7 @@
     <ClInclude Include="src\components\BulletComponent.h" />
     <ClInclude Include="src\components\HealthComponent.h" />
     <ClInclude Include="src\components\InputComponent.h" />
+    <ClInclude Include="src\components\PickupComponent.h" />
     <ClInclude Include="src\components\Transform.h" />
     <ClInclude Include="src\components\UIComponent.h" />
     <ClInclude Include="src\components\WeaponComponent.h" />

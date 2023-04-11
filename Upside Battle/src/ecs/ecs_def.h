@@ -16,6 +16,7 @@ enum cmpId : cmpId_type {
 	_COLLIDER,
 	_WEAPON,
 	_BULLET,
+	_PICKUP,
 
 	//DO NOT REMOVE THIS
 	_LAST_CMP_ID

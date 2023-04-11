@@ -3,14 +3,16 @@
 #include "../ecs/Entity.h"
 #include "Transform.h"
 #include "BlockComponent.h"
+#include "WeaponComponent.h"
 
 class InputComponent : public Component{
 private:
 	Transform* tr;
 	BlockComponent* rect;
+	WeaponComponent* weapon;
 
-	int keyIds[4];
-	bool keys[4];
+	int keyIds[5];
+	bool keys[5];
 
 public:
 	static constexpr int id = _INPUT;
@@ -22,5 +24,8 @@ public:
 
 	void keyPressed(int key);
 	void keyReleased(int key);
+
+	inline void setShootKey(int shoot, WeaponComponent* wp) { weapon = wp; keyIds[4] = shoot; }
+	inline void resetShootKey() { keyIds[4] = NULL; }
 };
 

@@ -4,7 +4,6 @@
 class BlockComponent : public Component {
 private:
 	ofxBox2dRect* body;
-	ofxBox2d* world;
 	int player;
 
 public:
@@ -26,4 +25,5 @@ public:
 	// Getters
 	inline ofxBox2dRect* getBody() { return body; }
 	inline float getMagnitudedVelocity() { return sqrtf(powf(body->getVelocity().x, 2) + powf(body->getVelocity().y, 2)); }
+	inline int getPlayer() { return player; }
 };

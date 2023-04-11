@@ -668,6 +668,9 @@
     <ClInclude Include="src\components\BulletComponent.h">
       <Filter>src\HEADERS\components</Filter>
     </ClInclude>
+    <ClInclude Include="src\components\PickupComponent.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

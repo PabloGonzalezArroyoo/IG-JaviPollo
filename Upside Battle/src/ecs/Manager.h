@@ -10,6 +10,7 @@ private:
 	// Estructura de entidades -> array de vectores
 	array<vector<Entity*>, maxGroupId> entsByGroup;
 	array<Entity*, maxHandlerId> handlers;
+	ofxBox2d* world;
 
 public: 
 	// Constructora y destructora
@@ -40,8 +41,16 @@ public:
 		return handlers[hId];
 	}
 
+	inline ofxBox2d* getWorld() {
+		return world;
+	}
+
 	// Setter
 	inline void setHandler(hdlrId_type hId, Entity* e) {
 		handlers[hId] = e;
+	}
+
+	inline void setWorld(ofxBox2d* w) {
+		world = w;
 	}
 };

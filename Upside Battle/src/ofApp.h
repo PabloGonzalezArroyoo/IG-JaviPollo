@@ -30,6 +30,8 @@ class ofApp : public ofBaseApp {
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+		void onRoundOver();
+
 		// Manager
 		Manager* mngr;
 
@@ -41,10 +43,15 @@ class ofApp : public ofBaseApp {
 		InputComponent* inputOne;
 		Entity* UIplayerOne;
 		Entity* weaponPlayerOne;
+		HealthComponent* healthPlayerOne;
 
 		// Jugador 2
 		Entity* playerTwo;
 		InputComponent* inputTwo;
 		Entity* UIplayerTwo;
 		Entity* weaponPlayerTwo;
+		HealthComponent* healthPlayerTwo;
+
+		// Arma
+		Entity* weapon;
 };

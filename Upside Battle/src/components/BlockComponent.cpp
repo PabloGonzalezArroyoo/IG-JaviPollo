@@ -1,10 +1,10 @@
 #include "BlockComponent.h"
 
 BlockComponent::BlockComponent(ofxBox2d* b2dworld, ofVec2f pos, float w, float h, int p) :
-	Component(), world(b2dworld), player(p) {
+	Component(), player(p) {
 	body = new ofxBox2dRect();
 	body->setPhysics(1, 0, 0);
-	body->setup(world->getWorld(), pos.x, pos.y, w, h);
+	body->setup(b2dworld->getWorld(), pos.x, pos.y, w, h);
 	body->enableGravity(false);
 	body->setFixedRotation(true);
 }

@@ -2,6 +2,7 @@
 
 #include "../ecs/Component.h"
 #include "Transform.h"
+#include "UIComponent.h"
 
 // Este componente sirve para manejar todos los eventos relacionados con la vida del objeto
 // Como su muerte o su curaci�n
@@ -13,13 +14,17 @@ private:
 	float invTime;
 	float time;
 
+	bool alive;
+
 	ofxBox2dRect* tr;
 	vector<ofRectangle> lifesHUD;
+
+	UIComponent* ui;
 
 public:
 	static const int id = _HEALTH;
 
-	HealthComponent(int Maxlife, bool invincibility = false);
+	HealthComponent(int Maxlife, UIComponent* ui, bool invincibility = false);
 
 	virtual void initComponent();
 	
@@ -32,4 +37,6 @@ public:
 
 	// Devuelve el valor actual de la vida
 	inline int getLife() { return lifePoints; }
+	inline bool isAlive() { return alive; }
+	inline void setAlive(bool a) { alive = a; }
 };
