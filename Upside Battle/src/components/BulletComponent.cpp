@@ -3,9 +3,9 @@
 
 BulletComponent::BulletComponent(ofxBox2d* b2dworld, ofVec2f pos, ofVec2f vel, int p) :
 	Component(), playerBullet(p), time(0) {
-	body = new ofxBox2dRect();
+	body = new ofxBox2dCircle();
 	body->setPhysics(1, 0, 0);
-	body->setup(b2dworld->getWorld(), pos.x, pos.y, 15, 15);
+	body->setup(b2dworld->getWorld(), pos.x, pos.y, 10);
 	body->enableGravity(false);
 	body->setFixedRotation(true);
 	body->setVelocity(vel);
@@ -25,7 +25,7 @@ void BulletComponent::update() {
 
 void BulletComponent::render() {
 	body->update();
-	if (playerBullet == 1) ofSetColor(255, 0, 0);
-	else ofSetColor(0, 0, 255);
+	if (playerBullet == 1) ofSetColor(219, 131, 33);
+	else ofSetColor(135, 168, 14);
 	body->draw();
 }

@@ -192,6 +192,10 @@
     <ClCompile Include="src\components\UIComponent.cpp" />
     <ClCompile Include="src\components\WeaponComponent.cpp" />
     <ClCompile Include="src\ecs\Manager.cpp" />
+    <ClCompile Include="src\game\GameStateMachine.cpp" />
+    <ClCompile Include="src\game\MainMenuState.cpp" />
+    <ClCompile Include="src\game\PauseState.cpp" />
+    <ClCompile Include="src\game\PlayState.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2d.cpp" />
@@ -282,6 +286,7 @@
     <ClInclude Include="src\components\PickupComponent.h" />
     <ClInclude Include="src\components\Transform.h" />
     <ClInclude Include="src\components\UIComponent.h" />
+    <ClInclude Include="src\components\WallComponent.h" />
     <ClInclude Include="src\components\WeaponComponent.h" />
     <ClInclude Include="src\ecs\CollisionListener.h" />
     <ClInclude Include="src\ecs\Component.h" />
@@ -289,6 +294,11 @@
     <ClInclude Include="src\ecs\ecs_def.h" />
     <ClInclude Include="src\ecs\Entity.h" />
     <ClInclude Include="src\ecs\Manager.h" />
+    <ClInclude Include="src\game\GameState.h" />
+    <ClInclude Include="src\game\GameStateMachine.h" />
+    <ClInclude Include="src\game\MainMenuState.h" />
+    <ClInclude Include="src\game\PauseState.h" />
+    <ClInclude Include="src\game\PlayState.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2d.h" />
     <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxBox2d-Physics\src\ofxBox2dBaseShape.h" />

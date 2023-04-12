@@ -29,6 +29,9 @@ using grpId_type = unsigned int;
 
 enum grpId : grpId_type {
 	_grp_GENERAL,
+	_grp_WEAPONS,
+	_grp_BULLETS,
+	_grp_MAP,
 	_grp_UI,
 
 	//DO NOT REMOVE THIS

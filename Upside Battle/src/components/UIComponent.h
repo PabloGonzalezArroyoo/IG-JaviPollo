@@ -20,6 +20,7 @@ public:
 	virtual void initComponent();
 	virtual void render();
 
-	void updatePoints(int points);
+	void updatePoints(int pts);
+	int getPoints() { return points; }
 };
 

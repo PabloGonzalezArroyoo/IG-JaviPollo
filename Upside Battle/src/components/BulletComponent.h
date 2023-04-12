@@ -3,7 +3,7 @@
 class BulletComponent : public Component {
 private:
 	int playerBullet;
-	ofxBox2dRect* body;
+	ofxBox2dCircle* body;
 	double time;
 
 public:

@@ -37,7 +37,7 @@ public:
 				if (blComp->getPlayer() == pkComp->getPlayerPick()) {
 					auto wpComp = ent1->addComponent<WeaponComponent>();
 					if (pkComp->getPlayerPick() == 1) ent1->getComponent<InputComponent>()->setShootKey('l', wpComp);
-					else ent1->getComponent<InputComponent>()->setShootKey('z', wpComp);
+					else ent1->getComponent<InputComponent>()->setShootKey('v', wpComp);
 					ent2->setAlive(false);
 				}
 				return;

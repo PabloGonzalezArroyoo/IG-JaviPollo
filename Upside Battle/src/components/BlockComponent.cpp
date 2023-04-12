@@ -19,8 +19,8 @@ void BlockComponent::initComponent() {
 
 void BlockComponent::render() {
 	body->update();
-	if (player == 1) ofSetColor(255, 0, 0);
-	else ofSetColor(0, 0, 255);
+	if (player == 1) ofSetColor(219, 131, 33);
+	else ofSetColor(135, 168, 14);
 	body->draw();
 }
 

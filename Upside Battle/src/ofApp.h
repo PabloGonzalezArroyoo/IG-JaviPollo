@@ -1,17 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ecs/Manager.h"
-#include "ecs/Entity.h"
-#include "components/InputComponent.h"
-#include "components/Transform.h"
-#include "components/BlockComponent.h"
-#include "components/UIComponent.h"
-#include "components/HealthComponent.h"
-#include "components/WeaponComponent.h"
-#include "ecs/CollisionListener.h"
+#include "game/GameStateMachine.h"
 
+class GameStateMachine;
 class ofApp : public ofBaseApp {
+private:
+	GameStateMachine* gsm;
 
 	public:
 		void setup();
@@ -30,28 +25,5 @@ class ofApp : public ofBaseApp {
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		void onRoundOver();
-
-		// Manager
-		Manager* mngr;
-
-		// Mundo (the box2d world)
-		ofxBox2d box2d;
-
-		// Jugador 1
-		Entity* playerOne;
-		InputComponent* inputOne;
-		Entity* UIplayerOne;
-		Entity* weaponPlayerOne;
-		HealthComponent* healthPlayerOne;
-
-		// Jugador 2
-		Entity* playerTwo;
-		InputComponent* inputTwo;
-		Entity* UIplayerTwo;
-		Entity* weaponPlayerTwo;
-		HealthComponent* healthPlayerTwo;
-
-		// Arma
-		Entity* weapon;
+		GameStateMachine* getGameStateMachine() { return gsm; }
 };

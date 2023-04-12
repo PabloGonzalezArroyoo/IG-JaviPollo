@@ -41,7 +41,7 @@ void WeaponComponent::render() {
 }
 
 void WeaponComponent::shoot() {
-	Entity* bullet = myMng->addEntity();
+	Entity* bullet = myMng->addEntity(_grp_BULLETS);
 	ofVec2f vel = blockBody->getVelocity().normalize();
 	if (vel.x != 0 || vel.y != 0) {
 		ofVec2f pos = blockBody->getPosition();

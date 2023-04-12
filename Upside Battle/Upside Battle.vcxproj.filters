@@ -268,6 +268,18 @@
     <ClCompile Include="src\components\BlockComponent.cpp">
       <Filter>src\SOURCE\components</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\GameStateMachine.cpp">
+      <Filter>src\SOURCE\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\MainMenuState.cpp">
+      <Filter>src\SOURCE\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\PauseState.cpp">
+      <Filter>src\SOURCE\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\PlayState.cpp">
+      <Filter>src\SOURCE\game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -356,6 +368,12 @@
     </Filter>
     <Filter Include="src\SOURCE\ecs">
       <UniqueIdentifier>{f456d585-f735-4fda-826d-97b944f39479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HEADERS\game">
+      <UniqueIdentifier>{fc6047a0-1199-42a8-8e4d-cee0ea9dc7b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SOURCE\game">
+      <UniqueIdentifier>{5996621f-fd4c-4a0c-a7c4-3a17c71efdbf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -670,6 +688,24 @@
     </ClInclude>
     <ClInclude Include="src\components\PickupComponent.h">
       <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\WallComponent.h">
+      <Filter>src\HEADERS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\GameState.h">
+      <Filter>src\HEADERS\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\GameStateMachine.h">
+      <Filter>src\HEADERS\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\MainMenuState.h">
+      <Filter>src\HEADERS\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\PauseState.h">
+      <Filter>src\HEADERS\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\PlayState.h">
+      <Filter>src\HEADERS\game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
