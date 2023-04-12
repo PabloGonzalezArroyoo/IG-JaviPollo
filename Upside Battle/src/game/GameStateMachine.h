@@ -17,7 +17,7 @@ public:
 	GameStateMachine(GameState* firstState);
 	~GameStateMachine();
 
-	// Métodos de gestión de estados
+	// Mï¿½todos de gestiï¿½n de estados
 	GameState* currentState() { return states.top(); };
 	void pushState(GameState* _state);
 	void changeState(GameState* newState);

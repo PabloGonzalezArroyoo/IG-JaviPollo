@@ -4,11 +4,14 @@
 
 class UIComponent : public Component {
 private:
-	ofRectangle uiBox;
+	ofRectangle uiPlayerBox;
+	ofRectangle uiPointsBox;
+	ofTrueTypeFont uiPlayer;
 	ofTrueTypeFont uiPoints;
 	Transform* tr;
 	int player;
 	int points;
+	string playerString;
 	string pointsString;
 
 public:

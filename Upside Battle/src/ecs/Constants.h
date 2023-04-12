@@ -21,3 +21,6 @@ const int MAX_LIFE = 3;
 // BULLETS
 const int BULLET_SPEED = 5;
 const int LIFETIME = 1;
+
+// WAPON
+const int WEAPON_DIMS = 15;

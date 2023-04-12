@@ -3,11 +3,14 @@
 
 class PauseState : public GameState {
 private:
+	ofTrueTypeFont pause;
+	string pauseTxt;
 
 public:
 	// Constructora
-	PauseState();
+	PauseState(ofApp* a);
 
 	// Sobrecarga del metodo update
-	virtual void update();
+	virtual void render();
+	virtual void keyPressed(int key);
 };

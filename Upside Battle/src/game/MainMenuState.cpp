@@ -24,6 +24,16 @@ void MainMenuState::update() {
 }
 
 void MainMenuState::render() {
+	float width = ofGetWidth() / 255.0;
+	int brillo = 68;
+	int saturation = 4;
+
+	for (int i = 0; i < 255; i++) {
+		ofColor c = ofColor(i, saturation, brillo);
+		ofSetColor(c);
+		ofDrawRectangle(i * width, 0, width, ofGetHeight());
+	}
+
 	ofSetColor(64, 64, 64);
 	titleShadow.drawString(titleTxt,
 		ofGetWidth() / 2 - title.stringWidth(titleTxt) / 2 + 20, ofGetHeight() / 2 - title.stringHeight(titleTxt) / 2 - 20);

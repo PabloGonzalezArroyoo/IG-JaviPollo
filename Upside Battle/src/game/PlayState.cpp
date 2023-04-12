@@ -1,4 +1,5 @@
 #include "PlayState.h"
+#include "PauseState.h"
 
 // Constructora
 PlayState::PlayState(ofApp* a) : GameState(a) {
@@ -46,8 +47,11 @@ void PlayState::refresh() {
 }
 
 void PlayState::keyPressed(int key) {
-	inputOne->keyPressed(key);
-	inputTwo->keyPressed(key);
+	if (key != 'p' && key != 'P') {
+		inputOne->keyPressed(key);
+		inputTwo->keyPressed(key);
+	}
+	else app->getGameStateMachine()->pushState(new PauseState(app));
 }
 
 void PlayState::keyReleased(int key) {
@@ -66,7 +70,8 @@ void PlayState::onGameStart() {
 	UIplayerOne->addComponent<UIComponent>(1);
 	// Arma
 	weaponPlayerOne = mng->addEntity(_grp_WEAPONS);
-	weaponPlayerOne->addComponent<PickupComponent>(&box2d, ofVec2f(ofGetWidth() - BLOCK_DIMS - 10, 150), 10, 10, 1);
+	weaponPlayerOne->addComponent<PickupComponent>(&box2d, ofVec2f(ofGetWidth() - BLOCK_DIMS - 10, 150),
+		WEAPON_DIMS, WEAPON_DIMS, 1);
 
 	// JUGADOR 2
 	// Entidad jugador
@@ -78,7 +83,8 @@ void PlayState::onGameStart() {
 	UIplayerTwo->addComponent<UIComponent>(2);
 	// Arma
 	weaponPlayerTwo = mng->addEntity(_grp_WEAPONS);
-	weaponPlayerTwo->addComponent<PickupComponent>(&box2d, ofVec2f(BLOCK_DIMS + 10, ofGetHeight() - 40), 10, 10, 2);
+	weaponPlayerTwo->addComponent<PickupComponent>(&box2d, ofVec2f(BLOCK_DIMS + 10, ofGetHeight() - 40),
+		WEAPON_DIMS, WEAPON_DIMS, 2);
 
 	// Vida
 	healthPlayerOne = playerOne->addComponent<HealthComponent>(MAX_LIFE, UIplayerTwo->getComponent<UIComponent>());
@@ -89,6 +95,7 @@ void PlayState::onGameStart() {
 }
 
 void PlayState::createMapOne() {
+	// Mapa
 	auto wall = mng->addEntity(_grp_MAP);
 	wall->addComponent<WallComponent>(&box2d, ofVec2f(150, 250), 125, 125);
 	wall = mng->addEntity(_grp_MAP);
@@ -105,6 +112,18 @@ void PlayState::createMapOne() {
 	wall->addComponent<WallComponent>(&box2d, ofVec2f(250, ofGetHeight() / 2 + 50), 250, 30);
 	wall = mng->addEntity(_grp_MAP);
 	wall->addComponent<WallComponent>(&box2d, ofVec2f(ofGetWidth() - 250, ofGetHeight() / 2 + 50), 250, 30);
+	
+	// Reborde
+	wall = mng->addEntity(_grp_MAP);
+	wall->addComponent<WallComponent>(&box2d, ofVec2f(0, ofGetHeight() / 7 + (ofGetHeight() - ofGetHeight() / 7) / 2),
+		5, ofGetHeight() - ofGetHeight() / 7);
+	wall = mng->addEntity(_grp_MAP);
+	wall->addComponent<WallComponent>(&box2d, ofVec2f(ofGetWidth() / 2, ofGetHeight() / 7 + 1), ofGetWidth(), 5);
+	wall = mng->addEntity(_grp_MAP);
+	wall->addComponent<WallComponent>(&box2d, ofVec2f(ofGetWidth(), ofGetHeight() / 7 + (ofGetHeight() - ofGetHeight() / 7) / 2),
+		5, ofGetHeight() - ofGetHeight() / 7);
+	wall = mng->addEntity(_grp_MAP);
+	wall->addComponent<WallComponent>(&box2d, ofVec2f(ofGetWidth() / 2, ofGetHeight()), ofGetWidth(), 5);
 }
 
 void PlayState::onRoundOver() {
@@ -123,10 +142,12 @@ void PlayState::onRoundOver() {
 
 	mng->removeEntities(_grp_WEAPONS);
 	weaponPlayerTwo = mng->addEntity(_grp_WEAPONS);
-	weaponPlayerTwo->addComponent<PickupComponent>(&box2d, ofVec2f(BLOCK_DIMS + 10, ofGetHeight() - 40), 10, 10, 2);
+	weaponPlayerTwo->addComponent<PickupComponent>(&box2d, ofVec2f(BLOCK_DIMS + 10, ofGetHeight() - 40),
+		WEAPON_DIMS, WEAPON_DIMS, 2);
 
 	weaponPlayerOne = mng->addEntity(_grp_WEAPONS);
-	weaponPlayerOne->addComponent<PickupComponent>(&box2d, ofVec2f(ofGetWidth() - BLOCK_DIMS - 10, 150), 10, 10, 1);
+	weaponPlayerOne->addComponent<PickupComponent>(&box2d, ofVec2f(ofGetWidth() - BLOCK_DIMS - 10, 150),
+		WEAPON_DIMS, WEAPON_DIMS, 1);
 
 	healthPlayerOne->setAlive(true);
 	healthPlayerTwo->setAlive(true);
@@ -134,11 +155,5 @@ void PlayState::onRoundOver() {
 }
 
 void PlayState::onGameFinish(int player) {
-	playerOne->removeComponent<InputComponent>();
-	playerOne->removeComponent<HealthComponent>();
-	playerOne->removeComponent<UIComponent>();
-
-	playerTwo->removeComponent<InputComponent>();
-	playerTwo->removeComponent<HealthComponent>();
-	playerTwo->removeComponent<UIComponent>();
+	// LANZAR ESTADO DE VICTORIA
 }
