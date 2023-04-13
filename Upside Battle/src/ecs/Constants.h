@@ -7,6 +7,8 @@ const int BLOCK_DIMS = 40;
 const int HUD_FONT_SIZE = 50;
 const int TITLE_FONT_SIZE = 80;
 const int START_FONT_SIZE = 42;
+const int PAUSE_FONT_SIZE = 100;
+const int CONTROLS_FONT_SIZE = 30;
 
 // INPUT
 const int NUMBER_OF_KEYS = 5;

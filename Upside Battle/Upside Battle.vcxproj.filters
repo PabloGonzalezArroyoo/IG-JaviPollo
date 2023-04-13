@@ -280,6 +280,12 @@
     <ClCompile Include="src\game\PlayState.cpp">
       <Filter>src\SOURCE\game</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\WinState.cpp">
+      <Filter>src\SOURCE\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\WallComponent.cpp">
+      <Filter>src\SOURCE\components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -705,6 +711,9 @@
       <Filter>src\HEADERS\game</Filter>
     </ClInclude>
     <ClInclude Include="src\game\PlayState.h">
+      <Filter>src\HEADERS\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\WinState.h">
       <Filter>src\HEADERS\game</Filter>
     </ClInclude>
   </ItemGroup>

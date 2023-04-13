@@ -1,5 +1,6 @@
 #include "PlayState.h"
 #include "PauseState.h"
+#include "WinState.h"
 
 // Constructora
 PlayState::PlayState(ofApp* a) : GameState(a) {
@@ -155,5 +156,5 @@ void PlayState::onRoundOver() {
 }
 
 void PlayState::onGameFinish(int player) {
-	// LANZAR ESTADO DE VICTORIA
+	app->getGameStateMachine()->changeState(new WinState(app, player));
 }

@@ -5,6 +5,8 @@ class PauseState : public GameState {
 private:
 	ofTrueTypeFont pause;
 	string pauseTxt;
+	ofTrueTypeFont controls;
+	string controlsTxt;
 
 public:
 	// Constructora
