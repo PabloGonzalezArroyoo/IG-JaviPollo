@@ -188,6 +188,7 @@
     <ClCompile Include="src\components\BulletComponent.cpp" />
     <ClCompile Include="src\components\HealthComponent.cpp" />
     <ClCompile Include="src\components\InputComponent.cpp" />
+    <ClCompile Include="src\components\PickupComponentcpp.cpp" />
     <ClCompile Include="src\components\Transform.cpp" />
     <ClCompile Include="src\components\UIComponent.cpp" />
     <ClCompile Include="src\components\WallComponent.cpp" />

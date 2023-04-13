@@ -13,25 +13,6 @@
 
 class PlayState : public GameState {
 private:
-
-
-public:
-	// Constructora y destructora
-	PlayState(ofApp* a);
-
-	//Sobrecarga del metodo update
-	virtual void update();
-	virtual void render();
-	virtual void refresh();
-
-	void onGameStart();
-	void onRoundOver();
-	void onGameFinish(int player);
-	void createMapOne();
-
-	void keyPressed(int key);
-	void keyReleased(int key);
-
 	// Mundo (the box2d world)
 	ofxBox2d box2d;
 
@@ -48,4 +29,21 @@ public:
 	Entity* UIplayerTwo;
 	Entity* weaponPlayerTwo;
 	HealthComponent* healthPlayerTwo;
+
+	ofSoundPlayer music;
+
+public:
+	// Constructora y destructora
+	PlayState(ofApp* a);
+
+	//Sobrecarga del metodo update
+	virtual void update();
+
+	void onGameStart();
+	void onRoundOver();
+	void onGameFinish(int player);
+	void createMapOne();
+
+	void keyPressed(int key);
+	void keyReleased(int key);
 };

@@ -10,29 +10,13 @@ public:
 	// Id del componente
 	static constexpr cmpId_type id = _BLOCK;
 
-	inline PickupComponent(ofxBox2d* b2dworld, ofVec2f pos, float w, float h, int p) :
-		Component(), playerPick(p) {
-		body = new ofxBox2dRect();
-		body->setPhysics(1, 0, 0);
-		body->setup(b2dworld->getWorld(), pos.x, pos.y, w, h);
-		body->enableGravity(false);
-		body->setFixedRotation(true);
-	}
+	PickupComponent(ofxBox2d* b2dworld, ofVec2f pos, float w, float h, int p);
+	~PickupComponent();
 
-	inline ~PickupComponent() {
-		body->destroy();
-	}
+	virtual void initComponent();
 
-	inline virtual void initComponent() {
-		body->setData(myObj);
-	}
-
-	inline virtual void render() {
-		body->update();
-		if (playerPick == 1) ofSetColor(219, 131, 33);
-		else ofSetColor(135, 168, 14);
-		body->draw();
-	}
+	virtual void update();
+	virtual void render();
 
 	inline int getPlayerPick() { return playerPick; }
 };

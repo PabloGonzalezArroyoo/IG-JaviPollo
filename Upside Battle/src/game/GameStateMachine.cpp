@@ -1,6 +1,6 @@
 #include "GameStateMachine.h"
 
-//Constructora con el primer estado del juego (el menu principal)
+// Constructora con el primer estado del juego
 GameStateMachine::GameStateMachine(GameState* firstState) {
 	pushState(firstState);
 }

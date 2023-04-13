@@ -14,7 +14,6 @@ PauseState::PauseState(ofApp* a) : GameState(a) {
 	controlsTxt += " + Press P to continue or pause";
 }
 
-// Manejo del input en el pasueState
 void PauseState::render() {
 	ofSetColor(255, 255, 255);
 	pause.drawString(pauseTxt,

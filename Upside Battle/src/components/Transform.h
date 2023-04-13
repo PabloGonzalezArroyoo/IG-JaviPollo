@@ -19,9 +19,6 @@ public:
 	Transform();
 	Transform(ofVec2f _pos, int _width, int _height, ofVec2f _vel = ofVec2f(), float _rotation = 0);
 
-	// Movimiento
-	virtual void update();
-
 	// Setters
 	inline void setPosition(ofVec2f _pos) { pos = _pos;  };
 	inline void setVelocity(ofVec2f _vel) { vel = _vel; };

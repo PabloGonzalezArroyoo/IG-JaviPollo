@@ -1,7 +1,6 @@
 #pragma once
 #include "../ecs/Component.h"
 #include "../ecs/Entity.h"
-#include "Transform.h"
 #include "BlockComponent.h"
 #include "WeaponComponent.h"
 
@@ -27,6 +26,6 @@ public:
 	void keyReleased(int key);
 
 	inline void setShootKey(int shoot, WeaponComponent* wp) { weapon = wp; keyIds[4] = shoot; }
-	inline void resetShootKey() { keyIds[4] = NULL; }
+	inline void resetShootKey() { keyIds[4] = INT64_MAX; keys[4] = false; }
 };
 

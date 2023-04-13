@@ -33,7 +33,7 @@ void UIComponent::render() {
 	uiPlayer.drawString(playerString,
 		uiPlayerBox.x + uiPlayerBox.width / 2 - uiPlayer.stringWidth(playerString) / 2,
 		uiPlayerBox.y + uiPlayerBox.height / 2 + HUD_FONT_SIZE / 2);
-	pointsString = to_string(points) + "/25";
+	pointsString = to_string(points) + " / 25";
 	uiPoints.drawString(pointsString,
 		uiPointsBox.x + uiPointsBox.width / 2 - uiPoints.stringWidth(pointsString) / 2,
 		uiPointsBox.y + uiPointsBox.height / 2 + HUD_FONT_SIZE / 2);

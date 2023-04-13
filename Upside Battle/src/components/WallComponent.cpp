@@ -13,8 +13,11 @@ WallComponent::~WallComponent() {
 	delete body;
 }
 
-void WallComponent::render() {
+void WallComponent::update() {
 	body->update();
+}
+ 
+void WallComponent::render() {
 	ofSetColor(162, 32, 147);
 	body->draw();
 }

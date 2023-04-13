@@ -7,46 +7,48 @@ PlayState::PlayState(ofApp* a) : GameState(a) {
 	// Añadir el manager
 	mng = new Manager();
 
+	// Inicializar mundo
 	box2d.init();
-	//box2d.setGravity(0, 10);
 	box2d.createBounds(0, ofGetHeight() / 7, ofGetWidth(), ofGetHeight() - ofGetHeight() / 7);
 	box2d.setFPS(60.0);
 	box2d.registerGrabbing();
 	box2d.getWorld()->SetContactListener(new CollisionListener(mng));
 
+	// Color del fondo
 	ofSetBackgroundColor(19, 4, 68);
 
 	// Mundo al manager
 	mng->setWorld(&box2d);
 
+	// Jugadores
 	playerOne = mng->addEntity();
-	UIplayerOne = mng->addEntity(_grp_UI);
-
 	playerTwo = mng->addEntity();
+
+	// UI
+	UIplayerOne = mng->addEntity(_grp_UI);
 	UIplayerTwo = mng->addEntity(_grp_UI);
 
+	music.load("../../resources/music.wav");
+	music.setLoop(true);
+
+	// Iniciar juego
 	onGameStart();
 }
 
-// Llamamos al update del padre (que llama al del manager), 
-// comprobamos las colisiones en el juego y si aún no acaba llamamos a la creacion de asteroides
 void PlayState::update() {
+	// Update del mundo y el manager
 	box2d.update();
 	mng->update();
 
+	// Si algún jugador ha muerto
 	if (!healthPlayerOne->isAlive() || !healthPlayerTwo->isAlive()) onRoundOver();
-	if (UIplayerOne->getComponent<UIComponent>()->getPoints() >= 5) onGameFinish(1);
-	else if (UIplayerTwo->getComponent<UIComponent>()->getPoints() >= 5) onGameFinish(2);
+
+	// Si alguno ha ganado
+	if (UIplayerOne->getComponent<UIComponent>()->getPoints() >= 25) onGameFinish(1);
+	else if (UIplayerTwo->getComponent<UIComponent>()->getPoints() >= 25) onGameFinish(2);
 }
 
-void PlayState::render() {
-	mng->render();
-}
-
-void PlayState::refresh() {
-	mng->refresh();
-}
-
+// Input
 void PlayState::keyPressed(int key) {
 	if (key != 'p' && key != 'P') {
 		inputOne->keyPressed(key);
@@ -55,6 +57,7 @@ void PlayState::keyPressed(int key) {
 	else app->getGameStateMachine()->pushState(new PauseState(app));
 }
 
+// Input
 void PlayState::keyReleased(int key) {
 	inputOne->keyReleased(key);
 	inputTwo->keyReleased(key);
@@ -93,6 +96,9 @@ void PlayState::onGameStart() {
 
 	// Crear mapa
 	createMapOne();
+
+	// Música
+	music.play();
 }
 
 void PlayState::createMapOne() {
@@ -128,33 +134,38 @@ void PlayState::createMapOne() {
 }
 
 void PlayState::onRoundOver() {
+	// Resetear posición de los jugadores
 	auto body = playerOne->getComponent<BlockComponent>()->getBody();
 	body->setVelocity(ofVec2f(0, 0));
 	body->setPosition(ofVec2f(BLOCK_DIMS + 10, ofGetHeight() / 2 + BLOCK_DIMS));
-
 	body = playerTwo->getComponent<BlockComponent>()->getBody();
 	body->setVelocity(ofVec2f(0, 0));
 	body->setPosition(ofVec2f(ofGetWidth() - BLOCK_DIMS - 10, ofGetHeight() / 2 + BLOCK_DIMS));
 
-	playerOne->removeComponent<WeaponComponent>();
-	playerTwo->removeComponent<WeaponComponent>();
+	// Quitar key de disparo y componente de arma
 	inputOne->resetShootKey();
 	inputTwo->resetShootKey();
+	playerOne->removeComponent<WeaponComponent>();
+	playerTwo->removeComponent<WeaponComponent>();
 
+	// Resetear las armas
 	mng->removeEntities(_grp_WEAPONS);
 	weaponPlayerTwo = mng->addEntity(_grp_WEAPONS);
 	weaponPlayerTwo->addComponent<PickupComponent>(&box2d, ofVec2f(BLOCK_DIMS + 10, ofGetHeight() - 40),
 		WEAPON_DIMS, WEAPON_DIMS, 2);
-
 	weaponPlayerOne = mng->addEntity(_grp_WEAPONS);
 	weaponPlayerOne->addComponent<PickupComponent>(&box2d, ofVec2f(ofGetWidth() - BLOCK_DIMS - 10, 150),
 		WEAPON_DIMS, WEAPON_DIMS, 1);
 
+	// Revivir a los jugadores y quitar las balas del escenario
 	healthPlayerOne->setAlive(true);
 	healthPlayerTwo->setAlive(true);
 	mng->removeEntities(_grp_BULLETS);
 }
 
 void PlayState::onGameFinish(int player) {
+	// Parar música
+	music.stop();
+	// Lanzar estado de victoria
 	app->getGameStateMachine()->changeState(new WinState(app, player));
 }

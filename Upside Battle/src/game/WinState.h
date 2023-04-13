@@ -23,5 +23,5 @@ public:
 	virtual void keyPressed(int key);
 
 	void createWinnerDisplay();
-	void drawCrown();
+	void drawCrown(int x, int y, int w);
 };

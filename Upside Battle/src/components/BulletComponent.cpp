@@ -11,11 +11,16 @@ BulletComponent::BulletComponent(ofxBox2d* b2dworld, ofVec2f pos, ofVec2f vel, i
 	body->setVelocity(vel);
 }
 
+BulletComponent::~BulletComponent() {
+	body->destroy();
+}
+
 void BulletComponent::initComponent() {
 	body->setData(myObj);
 }
 
 void BulletComponent::update() {
+	body->update();
 	time += ofGetLastFrameTime();
 	if (time >= LIFETIME) {
 		myObj->setAlive(false);
@@ -24,7 +29,6 @@ void BulletComponent::update() {
 }
 
 void BulletComponent::render() {
-	body->update();
 	if (playerBullet == 1) ofSetColor(219, 131, 33);
 	else ofSetColor(135, 168, 14);
 	body->draw();

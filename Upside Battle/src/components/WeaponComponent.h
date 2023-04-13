@@ -14,6 +14,7 @@ public:
 	// Id del componente
 	constexpr static cmpId_type id = _WEAPON;
 
+	// Métodos esenciales
 	virtual void initComponent();
 	virtual void render();
 

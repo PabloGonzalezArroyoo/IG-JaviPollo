@@ -20,7 +20,6 @@ WinState::WinState(ofApp* a, int w) : GameState(a), alpha(255), changeFactor(-1)
 	createWinnerDisplay();
 }
 
-// Manejo del input en el pasueState
 void WinState::render() {
 	ofSetColor(255, 255, 255);
 	win.drawString(winTxt, ofGetWidth() / 2 - win.stringWidth(winTxt) / 2, ofGetHeight() / 4 + PAUSE_FONT_SIZE / 2);
@@ -30,7 +29,8 @@ void WinState::render() {
 	ofSetColor(135, 168, 14);
 	ofDrawRectangle(rectP2);
 
-	drawCrown();
+	if (winner == 1) drawCrown(rectP1.x, rectP1.y, rectP1.width);
+	else drawCrown(rectP2.x, rectP2.y, rectP2.width);
 
 	ofSetColor(179, 179, 179, alpha);
 	pressStart.drawString(startTxt, ofGetWidth() / 2 - pressStart.stringWidth(startTxt) / 2,
@@ -47,8 +47,9 @@ void WinState::keyPressed(int key) {
 }
 
 void WinState::createWinnerDisplay() {
+	rectP1.x = ofGetWidth() / 4;
+	
 	if (winner == 1) {
-		rectP1.x = ofGetWidth() / 4;
 		rectP2.x = ofGetWidth() / 4 + 200 * 2;
 		rectP1.width = 200;
 		rectP1.height = 200;
@@ -58,7 +59,6 @@ void WinState::createWinnerDisplay() {
 		rectP2.y = ofGetHeight() / 2 + 150;
 	}
 	else {
-		rectP1.x = ofGetWidth() / 4;
 		rectP2.x = ofGetWidth() / 4 + 300;
 		rectP2.width = 200;
 		rectP2.height = 200;
@@ -69,27 +69,17 @@ void WinState::createWinnerDisplay() {
 	}
 }
 
-void WinState::drawCrown() {
+void WinState::drawCrown(int x, int y, int w) {
+	if (winner == 1) ofSetColor(219, 131, 33);
+	else ofSetColor(135, 168, 14);
+
 	ofBeginShape();
-	if (winner == 1) {
-		ofSetColor(219, 131, 33);
-		ofVertex(rectP1.x + rectP1.width / 2 - 40, rectP1.y + rectP1.width - 220);
-		ofVertex(rectP1.x + rectP1.width / 2 - 40, rectP1.y + rectP1.width - 280);
-		ofVertex(rectP1.x + rectP1.width / 2 - 20, rectP1.y + rectP1.width - 260);
-		ofVertex(rectP1.x + rectP1.width / 2, rectP1.y + rectP1.width - 280);
-		ofVertex(rectP1.x + rectP1.width / 2 + 20, rectP1.y + rectP1.width - 260);
-		ofVertex(rectP1.x + rectP1.width / 2 + 40, rectP1.y + rectP1.width - 280);
-		ofVertex(rectP1.x + rectP1.width / 2 + 40, rectP1.y + rectP1.width - 220);
-	} 
-	else {
-		ofSetColor(135, 168, 14);
-		ofVertex(rectP2.x + rectP2.width / 2 - 40, rectP2.y + rectP2.width - 220);
-		ofVertex(rectP2.x + rectP2.width / 2 - 40, rectP2.y + rectP2.width - 280);
-		ofVertex(rectP2.x + rectP2.width / 2 - 20, rectP2.y + rectP2.width - 260);
-		ofVertex(rectP2.x + rectP2.width / 2, rectP2.y + rectP2.width - 280);
-		ofVertex(rectP2.x + rectP2.width / 2 + 20, rectP2.y + rectP2.width - 260);
-		ofVertex(rectP2.x + rectP2.width / 2 + 40, rectP2.y + rectP2.width - 280);
-		ofVertex(rectP2.x + rectP2.width / 2 + 40, rectP2.y + rectP2.width - 220);
-	}
+	ofVertex(x + w / 2 - 40, y + w - 220);
+	ofVertex(x + w / 2 - 40, y + w - 280);
+	ofVertex(x + w / 2 - 20, y + w - 260);
+	ofVertex(x + w / 2, y + w - 280);
+	ofVertex(x + w / 2 + 20, y + w - 260);
+	ofVertex(x + w / 2 + 40, y + w - 280);
+	ofVertex(x + w / 2 + 40, y + w - 220);
 	ofEndShape();
 }

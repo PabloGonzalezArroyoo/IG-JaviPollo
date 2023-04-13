@@ -18,7 +18,6 @@ void BlockComponent::initComponent() {
 }
 
 void BlockComponent::render() {
-	body->update();
 	if (player == 1) ofSetColor(219, 131, 33);
 	else ofSetColor(135, 168, 14);
 	body->draw();
@@ -27,6 +26,7 @@ void BlockComponent::render() {
 void BlockComponent::update() {
 	body->setVelocity(body->getVelocity() * 0.99);
 	if (getMagnitudedVelocity() <= 0.002) body->setVelocity(ofVec2f());
+	body->update();
 }
 
 void BlockComponent::move(ofVec2f vel) {

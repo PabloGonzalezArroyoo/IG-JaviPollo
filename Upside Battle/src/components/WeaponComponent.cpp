@@ -59,5 +59,4 @@ void WeaponComponent::shoot() {
 		bullet->addComponent<BulletComponent>(myMng->getWorld(), newPos, vel * BULLET_SPEED,
 			myObj->getComponent<BlockComponent>()->getPlayer());
 	}
-	// bullet->addComponent<DisableOnExit>();
 }

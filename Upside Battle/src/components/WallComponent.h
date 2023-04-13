@@ -14,5 +14,6 @@ public:
 	~WallComponent();
 
 	// Métodos virtuales
+	virtual void update();
 	virtual void render();
 };
