@@ -7,6 +7,7 @@ class GameStateMachine;
 class ofApp : public ofBaseApp {
 private:
 	GameStateMachine* gsm;
+	vector<ofSoundPlayer> sounds;
 
 	public:
 		void setup();
@@ -26,4 +27,5 @@ private:
 		void gotMessage(ofMessage msg);
 
 		GameStateMachine* getGameStateMachine() { return gsm; }
+		void playSound(int s);
 };

@@ -4,6 +4,8 @@
 
 void WeaponComponent::initComponent() {
 	blockBody = myObj->getComponent<BlockComponent>()->getBody();
+	weapon.load("../../resources/powerup.wav");
+	weapon.play();
 }
 
 void WeaponComponent::render() {

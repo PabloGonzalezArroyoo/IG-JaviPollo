@@ -46,5 +46,8 @@ void MainMenuState::render() {
 }
 
 void MainMenuState::keyReleased(int key) {
-	if (key == ' ') app->getGameStateMachine()->changeState(new PlayState(app));
+	if (key == ' ') {
+		app->playSound(SELECT);
+		app->getGameStateMachine()->changeState(new PlayState(app));
+	}
 }

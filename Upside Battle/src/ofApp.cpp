@@ -8,6 +8,13 @@ void ofApp::setup(){
 	gsm = new GameStateMachine();
 
 	gsm->pushState(new MainMenuState(this));
+	
+	ofSoundPlayer s1;
+	s1.load("../../resources/select.wav");
+	sounds.push_back(s1); 
+	ofSoundPlayer s2;
+	s2.load("../../resources/win.wav");
+	sounds.push_back(s2);
 }
 
 //--------------------------------------------------------------
@@ -74,4 +81,8 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+void ofApp::playSound(int s) {
+	sounds[s].play();
 }

@@ -15,6 +15,8 @@ WinState::WinState(ofApp* a, int w) : GameState(a), alpha(255), changeFactor(-1)
 	winTxt = "P" + to_string(winner) + "  WINS!";
 	startTxt = "Press SPACE to play again";
 
+	app->playSound(WIN);
+
 	createWinnerDisplay();
 }
 

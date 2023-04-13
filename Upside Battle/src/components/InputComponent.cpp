@@ -7,6 +7,8 @@ InputComponent::InputComponent(int keyLeft, int keyRight, int keyUp, int keyDown
 	keyIds[3] = keyDown;
 
 	for (int i = 0; i < NUMBER_OF_KEYS; i++) keys[i] = false;
+
+	sound.load("../../resources/shoot.wav");
 }
 
 void InputComponent::initComponent() {
@@ -19,7 +21,11 @@ void InputComponent::update() {
 	else if (keys[1]) rect->move(ofVec2f(1, 0) * SPEEDLIMIT);
 	else if (keys[2]) rect->move(ofVec2f(0, -1) * SPEEDLIMIT);
 	else if (keys[3]) rect->move(ofVec2f(0, 1) * SPEEDLIMIT);
-	else if (keys[4]) { weapon->shoot(); keys[4] = false; }
+	else if (keys[4]) {
+		weapon->shoot();
+		keys[4] = false;
+		sound.play();
+	}
 }
 
 void InputComponent::keyPressed(int key) {

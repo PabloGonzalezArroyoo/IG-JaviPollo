@@ -8,6 +8,7 @@
 class WeaponComponent : public Component {
 private:
 	ofxBox2dRect* blockBody;
+	ofSoundPlayer weapon;
 
 public:
 	// Id del componente

@@ -35,8 +35,8 @@ void PlayState::update() {
 	mng->update();
 
 	if (!healthPlayerOne->isAlive() || !healthPlayerTwo->isAlive()) onRoundOver();
-	if (UIplayerOne->getComponent<UIComponent>()->getPoints() >= 25) onGameFinish(1);
-	else if (UIplayerTwo->getComponent<UIComponent>()->getPoints() >= 25) onGameFinish(2);
+	if (UIplayerOne->getComponent<UIComponent>()->getPoints() >= 5) onGameFinish(1);
+	else if (UIplayerTwo->getComponent<UIComponent>()->getPoints() >= 5) onGameFinish(2);
 }
 
 void PlayState::render() {

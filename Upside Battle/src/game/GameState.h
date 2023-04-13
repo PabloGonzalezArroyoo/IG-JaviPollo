@@ -2,6 +2,10 @@
 #include "../ecs/Manager.h"
 #include "../ofApp.h"
 
+enum SOUND {
+	SELECT, WIN
+};
+
 // Para evitar la dependencia circular
 class ofApp;
 class GameState {
@@ -9,6 +13,7 @@ protected:
 	// Referencia al manager que contengo y a Game
 	Manager* mng;
 	ofApp* app;
+	vector<ofSoundPlayer> sounds;
 
 public:
 	// Constructoras

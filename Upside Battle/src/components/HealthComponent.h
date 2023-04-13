@@ -21,6 +21,9 @@ private:
 
 	UIComponent* ui;
 
+	ofSoundPlayer hit;
+	ofSoundPlayer dead;
+
 public:
 	static const int id = _HEALTH;
 

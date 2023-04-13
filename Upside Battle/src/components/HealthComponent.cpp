@@ -13,6 +13,9 @@ void HealthComponent::initComponent() {
 		rect.height = 10;
 		lifesHUD.push_back(rect);
 	}
+
+	hit.load("../../resources/hit.wav");
+	dead.load("../../resources/dead.wav");
 }
 
 void HealthComponent::receiveDamage(int damage) {
@@ -20,8 +23,12 @@ void HealthComponent::receiveDamage(int damage) {
 	if (lifePoints <= 0) {
 		die();
 		ui->updatePoints(3);
+		dead.play();
 	}
-	else ui->updatePoints(1);
+	else {
+		ui->updatePoints(1);
+		hit.play();
+	}
 }
 
 void HealthComponent::update() {

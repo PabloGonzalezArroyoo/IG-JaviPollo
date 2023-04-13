@@ -10,6 +10,7 @@ private:
 	Transform* tr;
 	BlockComponent* rect;
 	WeaponComponent* weapon;
+	ofSoundPlayer sound;
 
 	int keyIds[5];
 	bool keys[5];
