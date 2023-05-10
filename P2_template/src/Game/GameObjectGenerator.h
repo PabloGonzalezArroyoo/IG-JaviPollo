@@ -13,7 +13,7 @@ public:
     
     void generateWorld();
 
-    void generateRandoms(int& ranX, int& ranY, int& fact);
+    void generateRandoms(int i, int& ranX, int& ranY, int& fact);
 };
 
 

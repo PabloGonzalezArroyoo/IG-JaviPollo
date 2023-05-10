@@ -6,6 +6,8 @@ Game::Game(){
     ROAD_WIDTH = 2000;
     ROAD_LENGTH = 10000;
 
+    srand(time(0));
+
     generator = new GameObjectGenerator(this);
     bDebug = false;
     scream.load("aaa.wav");

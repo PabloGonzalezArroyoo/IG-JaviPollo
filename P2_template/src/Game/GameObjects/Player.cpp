@@ -2,7 +2,7 @@
 #include "Game.h"
 #include "Bullet.h"
 
-Player::Player(Game *game):GameObject(game, glm::vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0) {
+Player::Player(Game *game) : GameObject(game, glm::vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0) {
     
     material.setDiffuseColor(ofColor::blue);
     
@@ -107,9 +107,9 @@ void Player::oilMovement() {
     if (oilTime < 2) {
         turnTime += ofGetLastFrameTime();
         if ((turnTime < 0.5) || (turnTime > 1.0 && turnTime < 1.5)) {
-            transform.rotateDeg(1.5, 0, 2, 0);
+            transform.rotateDeg(1.2, 0, 2, 0);
         }
-        else transform.rotateDeg(-1.6, 0, 2, 0);
+        else transform.rotateDeg(-1.3, 0, 2, 0);
     }
     else {
         oilTime = 0;

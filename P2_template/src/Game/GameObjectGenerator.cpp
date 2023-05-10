@@ -89,17 +89,14 @@ void GameObjectGenerator::generateWorld(){
     int randomZ = 0;
     int randomFactor = 0;
 
-    // Obstáculos
-    for (int i = 0; i < 5; i++) {
-        generateRandoms(randomX, randomZ, randomFactor);
+    // Obstáculos y monedas
+    for (int i = 1; i < 9; i++) {
+        generateRandoms(i, randomX, randomZ, randomFactor);
 
         auto obstacle = new Obstacle(game, glm::vec3(randomX, -25, randomZ), glm::vec3(100, 150, 100));
         game->addGameObject(obstacle);
-    }
 
-    // Monedas
-    for (int i = 0; i < 5; i++) {
-        generateRandoms(randomX, randomZ, randomFactor);
+        generateRandoms(i, randomX, randomZ, randomFactor);
 
         auto coin = new Coin(game, glm::vec3(randomX, -25, randomZ), glm::vec3(50));
         game->addGameObject(coin);
@@ -109,7 +106,8 @@ void GameObjectGenerator::generateWorld(){
     auto barrier = new Barrier(game, glm::vec3(0, 100, L/2), glm::vec3(300, 200, 100));
     game->addGameObject(barrier);
 
-    auto oil = new Oil(game, glm::vec3(-50, -50, 200), glm::vec3(50, 0, 50));
+    // Aceite
+    auto oil = new Oil(game, glm::vec3(-50, -49, 200), glm::vec3(50, 0, 50));
     game->addGameObject(oil);
 
     // Generador de peatones
@@ -117,10 +115,11 @@ void GameObjectGenerator::generateWorld(){
     game->addGameObject(generator);
 }
 
-void GameObjectGenerator::generateRandoms(int& ranX, int& ranY, int& fact) {
+// Genera numeros aleatorios para las posiciones de los objetos
+void GameObjectGenerator::generateRandoms(int i, int& ranX, int& ranY, int& fact) {
     if (rand() % 2 == 0) fact = 1;
     else fact = -1;
 
-    ranX = (rand() % game->ROAD_WIDTH / 2) * fact;
-    ranY = rand() % (game->ROAD_LENGTH - 20);
+    ranX = (rand() % (game->ROAD_WIDTH / 2 - 150)) * fact;
+    ranY = ((game->ROAD_LENGTH / 10 * i) + rand() % 200 + 1);
 }
