@@ -4,7 +4,8 @@
 #include "Player.h"
 #include "Game.h"
 
-Pedestrian::Pedestrian(Game *game, glm::vec3 pos, glm::vec3 dim): GameObject(game, pos, dim){
+Pedestrian::Pedestrian(Game *game, glm::vec3 pos, glm::vec3 dim, bool turn, PedestrianGenerator* pg): GameObject(game, pos, dim),
+    canTurn(turn), generator(pg) {
     model.loadModel("astroBoy_walk.dae");
     
     collider->move(0, dim.y/2 - 25, 0);
@@ -26,7 +27,6 @@ void Pedestrian::update() {
     model.update();
     transform.move(transform.getZAxis() * -speed);
     bTurned = false;
-
 };
 void Pedestrian::draw(){
     transform.transformGL();
@@ -38,6 +38,7 @@ void Pedestrian::draw(){
     //collider->drawWireframe();
     
 };
+
 void Pedestrian::receiveCarCollision(Player *car) {
     kill();
     game->doScream();
@@ -59,10 +60,13 @@ void Pedestrian::turn(){
     }
 }
 
-
 void Pedestrian::checkCollisions(){
     vector<GameObject*> collisions = game->getCollisions(this);
     for(auto c: collisions){
         c->receivePedestrianCollision(this);
     }
+}
+
+void Pedestrian::notifyGenerator() {
+    if (generator != nullptr) generator->setGenerate();
 }

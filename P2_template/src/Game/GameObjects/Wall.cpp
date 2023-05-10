@@ -25,5 +25,9 @@ void  Wall::receiveBulletCollision(GameObject *bullet){
 };
 
 void Wall::receivePedestrianCollision(Pedestrian *pedestrian){
-   pedestrian->turn();
+    if (pedestrian->getCanTurn()) pedestrian->turn();
+    else {
+        pedestrian->notifyGenerator();
+        pedestrian->kill();
+    }
 }

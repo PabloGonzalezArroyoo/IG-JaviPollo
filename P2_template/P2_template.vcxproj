@@ -190,6 +190,8 @@
   <ItemGroup>
     <ClCompile Include="src\Game\GameObjects\Barrier.cpp" />
     <ClCompile Include="src\Game\GameObjects\Obstacle.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Oil.cpp" />
+    <ClCompile Include="src\Game\GameObjects\PedestrianGenerator.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\Game\CollisionEngine.cpp" />
@@ -386,6 +388,8 @@
   <ItemGroup>
     <ClInclude Include="src\Game\GameObjects\Barrier.h" />
     <ClInclude Include="src\Game\GameObjects\Obstacle.h" />
+    <ClInclude Include="src\Game\GameObjects\Oil.h" />
+    <ClInclude Include="src\Game\GameObjects\PedestrianGenerator.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\Game\CollisionEngine.h" />
     <ClInclude Include="src\Game\Game.h" />

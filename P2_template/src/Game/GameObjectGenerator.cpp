@@ -8,6 +8,8 @@
 #include "Pedestrian.h"
 #include "Obstacle.h"
 #include "Barrier.h"
+#include "Player.h"
+#include "Oil.h"
 
 GameObjectGenerator::GameObjectGenerator(Game *game): game(game){}
 
@@ -66,7 +68,6 @@ void GameObjectGenerator::generateWorld(){
     game->addGameObject(wall_r);
 
     
-
     auto wall_l = new Wall(game,
                     glm::vec3(W/2, roadPos.y, roadPos.z),
                            glm::vec3(wallSize, wallSize, L));
@@ -82,12 +83,7 @@ void GameObjectGenerator::generateWorld(){
                            glm::vec3(W, 100, 100));
     goal->isFixed = true;
     game->addGameObject(goal);    
-    
-    auto pedestrian = new Pedestrian(game,
-        glm::vec3(W/2 - 100, -25, 500), glm::vec3(50, 150, 50));
 
-    game->addGameObject(pedestrian);
-    
     // Variables auxiliares
     int randomX = 0;
     int randomZ = 0;
@@ -109,9 +105,16 @@ void GameObjectGenerator::generateWorld(){
         game->addGameObject(coin);
     }
 
+    // Barrera
     auto barrier = new Barrier(game, glm::vec3(0, 100, L/2), glm::vec3(300, 200, 100));
     game->addGameObject(barrier);
 
+    auto oil = new Oil(game, glm::vec3(-50, -50, 200), glm::vec3(50, 0, 50));
+    game->addGameObject(oil);
+
+    // Generador de peatones
+    auto generator = new PedestrianGenerator(game, glm::vec3(0));
+    game->addGameObject(generator);
 }
 
 void GameObjectGenerator::generateRandoms(int& ranX, int& ranY, int& fact) {

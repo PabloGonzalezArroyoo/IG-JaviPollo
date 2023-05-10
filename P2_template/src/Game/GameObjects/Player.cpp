@@ -2,7 +2,7 @@
 #include "Game.h"
 #include "Bullet.h"
 
-Player::Player(Game *game):GameObject(game, glm::vec3(100)){
+Player::Player(Game *game):GameObject(game, glm::vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0) {
     
     material.setDiffuseColor(ofColor::blue);
     
@@ -29,6 +29,8 @@ void Player::update(){
     
     if(speed > MAX_SPEED) speed = MAX_SPEED;
     if(speed < 0) speed = 0;
+
+    if (oiled) oilMovement();
 }
 
 void Player::draw(){
@@ -97,4 +99,21 @@ int Player::getCoins(){
 void Player::shoot(){
     coins--;
     game->addGameObject(new Bullet(game, transform));
+}
+
+void Player::oilMovement() {
+    oilTime += ofGetLastFrameTime();
+    
+    if (oilTime < 2) {
+        turnTime += ofGetLastFrameTime();
+        if ((turnTime < 0.5) || (turnTime > 1.0 && turnTime < 1.5)) {
+            transform.rotateDeg(1.5, 0, 2, 0);
+        }
+        else transform.rotateDeg(-1.6, 0, 2, 0);
+    }
+    else {
+        oilTime = 0;
+        oiled = false;
+        turnTime = 0;
+    }
 }

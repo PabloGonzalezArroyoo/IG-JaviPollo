@@ -589,6 +589,12 @@
     <ClCompile Include="src\Game\GameObjects\Barrier.cpp">
       <Filter>src\Game\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\PedestrianGenerator.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Oil.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -1749,6 +1755,12 @@
       <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="src\Game\GameObjects\Barrier.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\PedestrianGenerator.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Oil.h">
       <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>

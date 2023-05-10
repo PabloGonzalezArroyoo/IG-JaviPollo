@@ -15,7 +15,12 @@ class Player : public GameObject{
     bool bLight;
     glm::vec3 prevPos;
     int coins;
-    
+
+    bool oiled;
+    double oilTime;
+    int auxFactor;
+    double turnTime;
+
 public:
     
     Player(Game *game);
@@ -37,6 +42,11 @@ public:
     void stop();
     void addCoins(int n = 1);
     int getCoins();
+
+    void oilMovement();
+
+    inline void setOiled() { oiled = true; }
+    inline bool isOiled() { return oiled; }
 };
 
 #endif 
