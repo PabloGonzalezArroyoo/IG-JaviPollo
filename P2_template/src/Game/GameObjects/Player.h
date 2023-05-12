@@ -21,6 +21,8 @@ class Player : public GameObject{
     int auxFactor;
     double turnTime;
 
+    bool soiled;
+
 public:
     
     Player(Game *game);
@@ -44,9 +46,10 @@ public:
     int getCoins();
 
     void oilMovement();
-
     inline void setOiled() { oiled = true; }
     inline bool isOiled() { return oiled; }
+
+    inline void setSoiled() { soiled = true; }
 };
 
 #endif 

@@ -10,6 +10,7 @@
 #include "Barrier.h"
 #include "Player.h"
 #include "Oil.h"
+#include "Soil.h"
 
 GameObjectGenerator::GameObjectGenerator(Game *game): game(game){}
 
@@ -109,6 +110,9 @@ void GameObjectGenerator::generateWorld(){
     // Aceite
     auto oil = new Oil(game, glm::vec3(-50, -49, 200), glm::vec3(50, 0, 50));
     game->addGameObject(oil);
+
+    auto soil = new Soil(game, glm::vec3(100, -49, 400), glm::vec3(200, 0, 400));
+    game->addGameObject(soil);
 
     // Generador de peatones
     auto generator = new PedestrianGenerator(game, glm::vec3(0));

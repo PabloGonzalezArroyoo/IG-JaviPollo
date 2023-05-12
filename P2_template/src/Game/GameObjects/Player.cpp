@@ -2,7 +2,8 @@
 #include "Game.h"
 #include "Bullet.h"
 
-Player::Player(Game *game) : GameObject(game, glm::vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0) {
+Player::Player(Game *game) : GameObject(game, glm::vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0),
+    soiled(false) {
     
     material.setDiffuseColor(ofColor::blue);
     
@@ -18,7 +19,7 @@ Player::~Player(){}
 void Player::init(){
     transform.setPosition(0, 0, 0);
     speed = 0;
-    bLight = false;
+    bLight = true;
     
     coins = 0;
 }
@@ -27,6 +28,13 @@ void Player::update(){
     prevPos = transform.getPosition();
     transform.move(transform.getZAxis() * speed);
     
+    if (soiled) {
+        if (speed < 10) speed *= 0.9;
+        else if (speed < 30) speed *= 0.8;
+        else speed *= 0.7;
+        soiled = false;
+    }
+
     if(speed > MAX_SPEED) speed = MAX_SPEED;
     if(speed < 0) speed = 0;
 
