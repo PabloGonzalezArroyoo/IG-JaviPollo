@@ -10,6 +10,8 @@ class Game;
 
 class Player : public GameObject{
     
+    glm::vec3 iniPos;
+
     ofLight faro;
     float speed;
     bool bLight;
@@ -50,6 +52,12 @@ public:
     inline bool isOiled() { return oiled; }
 
     inline void setSoiled() { soiled = true; }
+    
+    inline void setToInitPos() { 
+        collider->setPosition(iniPos); 
+        transform.setPosition(iniPos);
+        speed = 0;
+    }
 };
 
 #endif 

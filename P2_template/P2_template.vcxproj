@@ -188,10 +188,16 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Game\GameObjects\Arch.cpp" />
     <ClCompile Include="src\Game\GameObjects\Barrier.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Bomb.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Crane.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Explosion.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Hole.cpp" />
     <ClCompile Include="src\Game\GameObjects\Obstacle.cpp" />
     <ClCompile Include="src\Game\GameObjects\Oil.cpp" />
     <ClCompile Include="src\Game\GameObjects\PedestrianGenerator.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Airplane.cpp" />
     <ClCompile Include="src\Game\GameObjects\Soil.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -387,11 +393,18 @@
     <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxToggle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Game\GameObjects\Arch.h" />
     <ClInclude Include="src\Game\GameObjects\Barrier.h" />
+    <ClInclude Include="src\Game\GameObjects\Bomb.h" />
+    <ClInclude Include="src\Game\GameObjects\Crane.h" />
+    <ClInclude Include="src\Game\GameObjects\Explosion.h" />
+    <ClInclude Include="src\Game\GameObjects\Hole.h" />
     <ClInclude Include="src\Game\GameObjects\Obstacle.h" />
     <ClInclude Include="src\Game\GameObjects\Oil.h" />
     <ClInclude Include="src\Game\GameObjects\PedestrianGenerator.h" />
+    <ClInclude Include="src\Game\GameObjects\Airplane.h" />
     <ClInclude Include="src\Game\GameObjects\Soil.h" />
+    <ClInclude Include="src\Game\GameObjects\Wave.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\Game\CollisionEngine.h" />
     <ClInclude Include="src\Game\Game.h" />

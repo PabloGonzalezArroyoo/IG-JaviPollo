@@ -11,6 +11,9 @@
 #include "Player.h"
 #include "Oil.h"
 #include "Soil.h"
+#include "Arch.h"
+#include "Hole.h"
+#include "Airplane.h"
 
 GameObjectGenerator::GameObjectGenerator(Game *game): game(game){}
 
@@ -111,8 +114,21 @@ void GameObjectGenerator::generateWorld(){
     auto oil = new Oil(game, glm::vec3(-50, -49, 200), glm::vec3(50, 0, 50));
     game->addGameObject(oil);
 
+    // Tierra
     auto soil = new Soil(game, glm::vec3(100, -49, 400), glm::vec3(200, 0, 400));
     game->addGameObject(soil);
+
+    // Arco
+    auto arch = new Arch(game, glm::vec3(100, -49, 1000), glm::vec3(400, 300, 200));
+    game->addGameObject(arch);
+
+    // Hole
+    auto hole = new Hole(game, glm::vec3(100, -49, 1600), glm::vec3(400, 0, 200));
+    game->addGameObject(hole);
+
+    // Airplane
+    auto airplane = new Airplane(game, glm::vec3(100, 400, 1600), glm::vec3(300, 100, 200));
+    game->addGameObject(airplane);
 
     // Generador de peatones
     auto generator = new PedestrianGenerator(game, glm::vec3(0));

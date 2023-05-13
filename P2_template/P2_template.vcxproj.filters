@@ -598,6 +598,24 @@
     <ClCompile Include="src\Game\GameObjects\Soil.cpp">
       <Filter>src\Game\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Crane.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Arch.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Hole.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Airplane.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Bomb.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Explosion.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -1767,6 +1785,27 @@
       <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="src\Game\GameObjects\Soil.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Crane.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Arch.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Hole.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Airplane.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Bomb.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Wave.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Explosion.h">
       <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>

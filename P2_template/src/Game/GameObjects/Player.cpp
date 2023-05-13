@@ -20,7 +20,7 @@ void Player::init(){
     transform.setPosition(0, 0, 0);
     speed = 0;
     bLight = true;
-    
+    iniPos = collider->getPosition();
     coins = 0;
 }
 
