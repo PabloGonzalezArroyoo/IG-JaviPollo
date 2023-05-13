@@ -214,7 +214,9 @@
     <ClCompile Include="src\Game\GameObjects\Road.cpp" />
     <ClCompile Include="src\Game\GameObjects\Wall.cpp" />
     <ClCompile Include="src\Pedestrian.cpp" />
+    <ClCompile Include="src\State\GameStateMachine.cpp" />
     <ClCompile Include="src\State\States\MenuState.cpp" />
+    <ClCompile Include="src\State\States\PauseState.cpp" />
     <ClCompile Include="src\State\States\PlayState.cpp" />
     <ClCompile Include="src\State\States\ResultState.cpp" />
     <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp" />
@@ -420,9 +422,11 @@
     <ClInclude Include="src\Game\GameObjects\Road.h" />
     <ClInclude Include="src\Game\GameObjects\Wall.h" />
     <ClInclude Include="src\Pedestrian.h" />
+    <ClInclude Include="src\State\GameStateMachine.h" />
     <ClInclude Include="src\State\State.h" />
     <ClInclude Include="src\State\StateMachine.h" />
     <ClInclude Include="src\State\States\MenuState.h" />
+    <ClInclude Include="src\State\States\PauseState.h" />
     <ClInclude Include="src\State\States\PlayState.h" />
     <ClInclude Include="src\State\States\ResultState.h" />
     <ClInclude Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />

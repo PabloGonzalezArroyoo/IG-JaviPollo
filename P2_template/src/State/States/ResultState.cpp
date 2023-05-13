@@ -15,7 +15,3 @@ void ResultState::draw(){
     ofBackground(127);
     ofDrawBitmapString(name, 10, 20);
 };
-
-void ResultState::next(){
-    game->setState(new MenuState(game));
-};

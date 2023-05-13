@@ -2,11 +2,12 @@
 #include "Player.h"
 
 Hole::Hole(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim) {
-    material.setEmissiveColor(ofColor::black);
-
     plane.setParent(transform);
     transform.rotateDeg(-90, 1, 0, 0);
     plane.set(dim.x, dim.z);
+    ofEnableAlphaBlending();
+    ofDisableArbTex();
+    ofLoadImage(texture, "hole.png");
 }
 
 Hole::~Hole() { }
@@ -25,9 +26,7 @@ void Hole::receiveCarCollision(Player* car) {
 }
 
 void Hole::draw() {
-    material.begin();
-    {
-        plane.draw();
-    }
-    material.end();
+    texture.bind();
+    plane.draw();
+    texture.unbind();
 }

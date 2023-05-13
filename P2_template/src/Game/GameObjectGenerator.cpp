@@ -115,7 +115,7 @@ void GameObjectGenerator::generateWorld(){
     game->addGameObject(oil);
 
     // Tierra
-    auto soil = new Soil(game, glm::vec3(100, -49, 400), glm::vec3(200, 0, 400));
+    auto soil = new Soil(game, glm::vec3(100, -49, 400), glm::vec3(300, 0, 300));
     game->addGameObject(soil);
 
     // Arco

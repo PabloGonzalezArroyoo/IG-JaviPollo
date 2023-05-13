@@ -1,0 +1,5 @@
+- La grua
+- Animación del arco loco
+- Cámara cenital para el circuito
+- Las 3 extensiones
+- Ponerlo bonito (sonidos, menú, ilumminación, guardar record)

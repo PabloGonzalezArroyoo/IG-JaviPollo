@@ -1,16 +1,20 @@
 #include "Game.h"
 #include "Player.h"
+#include "PlayState.h"
 
 Game::Game(){
     // TODO create settings
     ROAD_WIDTH = 2000;
     ROAD_LENGTH = 10000;
 
+    gsm = new GameStateMachine();
+
     srand(time(0));
 
     generator = new GameObjectGenerator(this);
     bDebug = false;
     scream.load("aaa.wav");
+    timer = 0;
 }
 
 Game::~Game(){
@@ -18,6 +22,7 @@ Game::~Game(){
     delete gameObjects;
     delete generator;
     delete currentState();
+    delete gsm;
 }
 
 void Game::init(){
@@ -39,29 +44,31 @@ void Game::init(){
     
     gameObjects->add(player);
     generator->generateWorld();
-    bPlayerFinish = false;
-    initTime = ofGetElapsedTimef();
 }
 
 void Game::update(){
-    gameObjects->update();
+    if (dynamic_cast<PlayState*>(gsm->currentState()) != nullptr) {
+        gameObjects->update();
+        timer += ofGetLastFrameTime();
+    }
 }
 
 void Game::draw(){
-    ofEnableLighting();
-    ofEnableDepthTest();
+    if (dynamic_cast<PlayState*>(gsm->currentState()) != nullptr) {
+        ofEnableLighting();
+        ofEnableDepthTest();
+        
+        cam.begin();
+        {
+            if(bDebug) gameObjects->drawDebug();
+            else gameObjects->draw();
+        }
+        cam.end();
     
-    cam.begin();
-    {
-        if(bDebug) gameObjects->drawDebug();
-        else gameObjects->draw();
+        ofDisableLighting();
+        ofDisableDepthTest();
     }
-    cam.end();
-    
-    ofDisableLighting();
-    ofDisableDepthTest();
 }
-
 
 Player * Game::getPlayer(){
     return player;
@@ -75,24 +82,12 @@ void  Game::addGameObject(GameObject *gameobject){
     gameObjects->add(gameobject);
 }
 
-void Game::finishGame(){
-    bPlayerFinish = true;
-}
-
 void Game::toggleDebug(){
     bDebug = !bDebug;
 }
 
-bool Game::isFinished(){
-    return bPlayerFinish;
-}
-
-void Game::setFinished(bool v){
-    bPlayerFinish = v;
-}
-
 float Game::getEllapsedTime(){
-    return ofGetElapsedTimef() - initTime;
+    return timer;
 }
 
 void Game::doScream(){

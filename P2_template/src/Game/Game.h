@@ -5,6 +5,7 @@
 #include "StateMachine.h"
 #include "GameObjectContainer.h"
 #include "GameObjectGenerator.h"
+#include "GameStateMachine.h"
 
 class Player;
 
@@ -14,11 +15,12 @@ class Game : public StateMachine{
     GameObjectContainer *gameObjects = nullptr;
     GameObjectGenerator *generator  = nullptr;
     bool bDebug;
-    bool bPlayerFinish;
-    float initTime;
+
+    double timer;
     
     ofSoundPlayer scream;
 
+    GameStateMachine* gsm;
     
 public:
     int ROAD_LENGTH;
@@ -29,10 +31,7 @@ public:
     void init();
     void update();
     void draw();
-    void finishGame();
     void toggleDebug();
-    bool isFinished();
-    void setFinished(bool v);
     
     Player *getPlayer();
     vector<GameObject *> getCollisions(GameObject *gameObject);
@@ -40,6 +39,8 @@ public:
     
     float getEllapsedTime();
     void doScream();
+
+    inline GameStateMachine* getGameStateMachine() { return gsm; }
     
 };
 #endif

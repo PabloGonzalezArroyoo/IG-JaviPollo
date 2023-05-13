@@ -11,9 +11,8 @@ public:
     
     ~MenuState(){};
     
-    void update();
-    void draw();
-    void next();
-        
+    virtual void update();
+    virtual void draw();     
+    virtual void keyPressed(int key);
 };
 #endif 

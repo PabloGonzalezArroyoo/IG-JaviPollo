@@ -1,5 +1,6 @@
 #include "PlayState.h"
 #include "ResultState.h"
+#include "PauseState.h"
 #include "Player.h"
 
 PlayState::PlayState(Game *game): State(game, "Play State"){
@@ -42,11 +43,6 @@ void PlayState::draw(){
     game->draw();
 };
 
-void PlayState::next(){
-    game->setState(new ResultState(game));
-};
-
-
 void PlayState::keyPressed(int key){
     if(key == 'l')
         game->getPlayer()->toggleLight();
@@ -54,4 +50,7 @@ void PlayState::keyPressed(int key){
         game->toggleDebug();
     if(key == ' ')
         if (game->getPlayer()->getCoins() > 0) game->getPlayer()->shoot();
+    if (key == 'p') {
+        game->getGameStateMachine()->pushState(new PauseState(game));
+    }
 }

@@ -2,6 +2,7 @@
 #include "MenuState.h"
 
 void MenuState::update(){
+
 };
     
 void MenuState::draw(){
@@ -9,6 +10,7 @@ void MenuState::draw(){
     ofDrawBitmapString(name, 10, 20);
 };
 
-void MenuState::next(){
-    game->setState(new PlayState(game));
-};
+void MenuState::keyPressed(int key) {
+    if (key == ' ')
+        game->getGameStateMachine()->pushState(new PlayState(game));
+}

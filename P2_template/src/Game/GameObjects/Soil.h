@@ -5,6 +5,7 @@
 class Soil : public GameObject {
 private:
 	ofPlanePrimitive plane;
+	ofTexture texture;
 
 public:
 	Soil(Game* g, glm::vec3 p, glm::vec3 d);

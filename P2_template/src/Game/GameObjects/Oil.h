@@ -5,6 +5,7 @@
 class Oil : public GameObject {
 private:
 	ofPlanePrimitive plane;
+	ofTexture texture;
 
 public:
 	Oil(Game* g, glm::vec3 p, glm::vec3 d);

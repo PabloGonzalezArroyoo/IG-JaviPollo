@@ -2,11 +2,13 @@
 #include "Player.h"
 
 Soil::Soil(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim) {
-    material.setEmissiveColor(ofColor::brown);
-
     plane.setParent(transform);
     transform.rotateDeg(-90, 1, 0, 0);
     plane.set(dim.x, dim.z);
+    ofEnableAlphaBlending();
+    ofDisableArbTex();
+    ofLoadImage(texture, "dirt.png");
+    texture.setTextureWrap(GL_REPEAT, GL_REPEAT);
 }
 
 Soil::~Soil() { }
@@ -16,9 +18,7 @@ void Soil::receiveCarCollision(Player* car) {
 }
 
 void Soil::draw() {
-    material.begin();
-    {
-        plane.draw();
-    }
-    material.end();
+    texture.bind();
+    plane.draw();
+    texture.unbind();
 }

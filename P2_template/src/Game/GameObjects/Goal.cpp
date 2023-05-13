@@ -34,5 +34,5 @@ void Goal::drawDebug(){
 
 void  Goal::receiveCarCollision(Player *car){
     car->stop();
-    game->finishGame();
+    //game->finishGame();
 }

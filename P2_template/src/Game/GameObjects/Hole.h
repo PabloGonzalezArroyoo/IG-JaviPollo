@@ -5,6 +5,7 @@
 class Hole : public GameObject {
 private:
 	ofPlanePrimitive plane;
+	ofTexture texture;
 
 public:
 	Hole(Game* game, glm::vec3 pos, glm::vec3 dim);

@@ -2,7 +2,6 @@
 
 #include "ofMain.h"
 #include "Game.h"
-#include "State.h"
 
 class ofApp : public ofBaseApp{
 

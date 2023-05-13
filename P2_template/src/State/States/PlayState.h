@@ -13,7 +13,6 @@ public:
     
     void update();
     void draw();
-    void next();
     void keyPressed(int key);
         
 };
