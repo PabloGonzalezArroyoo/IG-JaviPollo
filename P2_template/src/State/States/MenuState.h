@@ -5,6 +5,9 @@
 #include "Game.h"
 
 class MenuState: public State{
+private:
+    ofTrueTypeFont text;
+
 public:
     MenuState(Game *game): State(game, "Menu State"){
     };

@@ -22,7 +22,7 @@ public:
     GameObject(Game *game, glm::vec3 pos,  glm::vec3 dim);
     virtual ~GameObject();
     
-    virtual void draw() = 0;
+    virtual void draw() { };
     virtual void drawDebug();
     virtual void update() {};
     virtual void checkCollisions(){};

@@ -622,6 +622,9 @@
     <ClCompile Include="src\State\GameStateMachine.cpp">
       <Filter>src\State</Filter>
     </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Claw.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -1819,6 +1822,9 @@
     </ClInclude>
     <ClInclude Include="src\State\GameStateMachine.h">
       <Filter>src\State</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Claw.h">
+      <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

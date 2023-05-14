@@ -52,6 +52,8 @@ public:
     inline bool isOiled() { return oiled; }
 
     inline void setSoiled() { soiled = true; }
+
+    inline void setCoins(int x) { coins = x; }
     
     inline void setToInitPos() { 
         collider->setPosition(iniPos); 

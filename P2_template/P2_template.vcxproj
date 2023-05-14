@@ -191,6 +191,7 @@
     <ClCompile Include="src\Game\GameObjects\Arch.cpp" />
     <ClCompile Include="src\Game\GameObjects\Barrier.cpp" />
     <ClCompile Include="src\Game\GameObjects\Bomb.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Claw.cpp" />
     <ClCompile Include="src\Game\GameObjects\Crane.cpp" />
     <ClCompile Include="src\Game\GameObjects\Explosion.cpp" />
     <ClCompile Include="src\Game\GameObjects\Hole.cpp" />
@@ -398,6 +399,7 @@
     <ClInclude Include="src\Game\GameObjects\Arch.h" />
     <ClInclude Include="src\Game\GameObjects\Barrier.h" />
     <ClInclude Include="src\Game\GameObjects\Bomb.h" />
+    <ClInclude Include="src\Game\GameObjects\Claw.h" />
     <ClInclude Include="src\Game\GameObjects\Crane.h" />
     <ClInclude Include="src\Game\GameObjects\Explosion.h" />
     <ClInclude Include="src\Game\GameObjects\Hole.h" />
