@@ -2,7 +2,7 @@
 #include "Player.h"
 #include "Game.h"
 
-Bomb::Bomb(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim) {
+Bomb::Bomb(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     material.setEmissiveColor(ofColor::paleVioletRed);
 
 }
@@ -19,7 +19,7 @@ void Bomb::update() {
 
     if (transform.getPosition().y < 0) {
         this->kill();
-        auto explosion = new Explosion(game, transform.getPosition(), glm::vec3(200));
+        auto explosion = new Explosion(game, transform.getPosition(), vec3(200));
         game->addGameObject(explosion);
     }
 }

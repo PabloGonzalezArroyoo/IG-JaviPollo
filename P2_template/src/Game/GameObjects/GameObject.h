@@ -4,6 +4,7 @@
 #include "ofMain.h"
 #include "iCollide.h"
 #include "BoxCollider.h"
+#include "Constants.h"
 
 class Game;
 class Player;
@@ -14,12 +15,12 @@ protected:
     ofMaterial material;
     bool bAlive;
     Game *game;
-    void init(glm::vec3 pos);
+    void init(vec3 pos);
     
 public:
     ofNode transform;
-    GameObject(Game *game, glm::vec3 pos);
-    GameObject(Game *game, glm::vec3 pos,  glm::vec3 dim);
+    GameObject(Game *game, vec3 pos);
+    GameObject(Game *game, vec3 pos,  vec3 dim);
     virtual ~GameObject();
     
     virtual void draw() { };

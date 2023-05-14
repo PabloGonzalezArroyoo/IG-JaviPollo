@@ -1,7 +1,7 @@
 #include "Obstacle.h"
 #include "Player.h"
 
-Obstacle::Obstacle(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim) {
+Obstacle::Obstacle(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     material.setEmissiveColor(ofColor::aquamarine);
 }
 Obstacle::~Obstacle() {}

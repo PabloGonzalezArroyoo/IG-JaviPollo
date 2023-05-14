@@ -9,7 +9,7 @@ private:
 
 public:
 
-    Barrier(Game* game, glm::vec3 pos, glm::vec3 dim);
+    Barrier(Game* game, vec3 pos, vec3 dim);
     ~Barrier();
 
     void draw() override;

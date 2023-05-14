@@ -8,7 +8,7 @@ class Goal : public GameObject{
     
     
 public:
-    Goal(Game *game, glm::vec3 pos, glm::vec3 dim);
+    Goal(Game *game, vec3 pos, vec3 dim);
     ~Goal();
     
     void draw() override;

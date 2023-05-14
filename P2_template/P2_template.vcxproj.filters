@@ -1826,6 +1826,9 @@
     <ClInclude Include="src\Game\GameObjects\Claw.h">
       <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
+    <ClInclude Include="src\Constants.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

@@ -7,7 +7,7 @@ private:
     int initYPos;
     int speed;
 public:
-    Claw(Game* game, glm::vec3 pos, glm::vec3 dim);
+    Claw(Game* game, vec3 pos, vec3 dim);
     ~Claw();
 
     void update() override;

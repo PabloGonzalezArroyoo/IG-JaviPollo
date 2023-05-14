@@ -16,22 +16,21 @@ class Game : public StateMachine{
     GameObjectGenerator *generator  = nullptr;
     bool bDebug;
 
+    bool win;
     double timer;
     
     ofSoundPlayer scream;
 
     GameStateMachine* gsm;
     
-public:
-    int ROAD_LENGTH;
-    int ROAD_WIDTH;
-    
+public:    
     Game();
     ~Game();
     void init();
     void update();
     void draw();
     void toggleDebug();
+    void playerWins();
     
     Player *getPlayer();
     vector<GameObject *> getCollisions(GameObject *gameObject);

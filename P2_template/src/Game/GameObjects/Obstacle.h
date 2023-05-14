@@ -6,7 +6,7 @@ class Obstacle : public GameObject {
 
 
 public:
-    Obstacle(Game* game, glm::vec3 pos, glm::vec3 dim);
+    Obstacle(Game* game, vec3 pos, vec3 dim);
     ~Obstacle();
 
     void draw() override;

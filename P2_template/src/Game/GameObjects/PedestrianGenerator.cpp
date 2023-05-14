@@ -1,13 +1,12 @@
 #include "PedestrianGenerator.h"
 #include "Game.h"
 
-PedestrianGenerator::PedestrianGenerator(Game* g, glm::vec3 p) : GameObject(g, p), time(0), canGenerate(true) { }
+PedestrianGenerator::PedestrianGenerator(Game* g, vec3 p) : GameObject(g, p), time(0), canGenerate(true) { }
 
 PedestrianGenerator::~PedestrianGenerator() { }
 
 void PedestrianGenerator::generatePedestrians() {
-    auto pedestrian = new Pedestrian(game,
-        glm::vec3(game->ROAD_WIDTH / 2 - 100, -25, 500), glm::vec3(50, 150, 50), false, this);
+    auto pedestrian = new Pedestrian(game, vec3(ROAD_WIDTH / 2 - 100, -25, 500), vec3(50, 150, 50), false, this);
 
     game->addGameObject(pedestrian);
 

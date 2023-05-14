@@ -9,7 +9,7 @@ private:
     Claw* gancho;
 
 public:
-    Crane(Game* game, glm::vec3 pos, glm::vec3 dim);
+    Crane(Game* game, vec3 pos, vec3 dim);
     ~Crane();
 
     void update() override;

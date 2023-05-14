@@ -6,7 +6,7 @@
 class Coin : public GameObject{
     
 public:
-    Coin(Game *game, glm::vec3 pos, glm::vec3 dim);
+    Coin(Game *game, vec3 pos, vec3 dim);
     ~Coin();
     
     void update() override;

@@ -1,18 +1,17 @@
 #include "Game.h"
 #include "Player.h"
 #include "PlayState.h"
+#include "ResultState.h"
 
 Game::Game(){
     // TODO create settings
-    ROAD_WIDTH = 2000;
-    ROAD_LENGTH = 10000;
-
     gsm = new GameStateMachine();
 
     srand(time(0));
 
     generator = new GameObjectGenerator(this);
     bDebug = false;
+    win = false;
     scream.load("aaa.wav");
     timer = 0;
 }
@@ -51,6 +50,10 @@ void Game::update(){
         gameObjects->update();
         timer += ofGetLastFrameTime();
     }
+
+    if (win) {
+        gsm->changeState(new ResultState(this));
+    }
 }
 
 void Game::draw(){
@@ -78,12 +81,16 @@ vector<GameObject *> Game::getCollisions(GameObject *gameObject){
     return gameObjects->getCollisions(gameObject);
 }
 
-void  Game::addGameObject(GameObject *gameobject){
+void Game::addGameObject(GameObject *gameobject){
     gameObjects->add(gameobject);
 }
 
 void Game::toggleDebug(){
     bDebug = !bDebug;
+}
+
+void Game::playerWins() {
+    win = true;
 }
 
 float Game::getEllapsedTime(){

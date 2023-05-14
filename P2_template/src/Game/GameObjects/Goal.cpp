@@ -3,9 +3,10 @@
 #include "Player.h"
 #include "Game.h"
 
-Goal::Goal(Game *game, glm::vec3 pos, glm::vec3 dim): GameObject(game, pos, dim){
+Goal::Goal(Game *game, vec3 pos, vec3 dim): GameObject(game, pos, dim){
     material.setEmissiveColor(ofColor::green);
 }
+
 Goal::~Goal(){}
 
 void Goal::draw(){
@@ -34,5 +35,5 @@ void Goal::drawDebug(){
 
 void  Goal::receiveCarCollision(Player *car){
     car->stop();
-    //game->finishGame();
+    game->playerWins();
 }

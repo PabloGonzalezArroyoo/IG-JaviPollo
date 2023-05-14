@@ -3,13 +3,11 @@
 #include "PauseState.h"
 #include "Player.h"
 
-PlayState::PlayState(Game *game): State(game, "Play State"){
+PlayState::PlayState(Game *game) : State(game, "Play State"){
     game->init();
 };
 
 void PlayState::update(){
-    game->update();
-    
     if (!game->getPlayer()->isOiled()) {
         if (ofGetKeyPressed(OF_KEY_LEFT))
             game->getPlayer()->steerLeft();
@@ -20,6 +18,8 @@ void PlayState::update(){
         if (ofGetKeyPressed(OF_KEY_DOWN))
             game->getPlayer()->brake();
     }
+
+    game->update();
 };
     
 void PlayState::draw(){

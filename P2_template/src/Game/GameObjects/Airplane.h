@@ -11,7 +11,7 @@ private:
 	bool bTurned;
 
 public:
-	Airplane(Game* game, glm::vec3 pos, glm::vec3 dim);
+	Airplane(Game* game, vec3 pos, vec3 dim);
 	~Airplane();
 
 	virtual void update();

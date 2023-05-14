@@ -396,6 +396,7 @@
     <ClCompile Include="..\..\..\..\..\Documents\openFrameWork\addons\ofxGui\src\ofxToggle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Constants.h" />
     <ClInclude Include="src\Game\GameObjects\Arch.h" />
     <ClInclude Include="src\Game\GameObjects\Barrier.h" />
     <ClInclude Include="src\Game\GameObjects\Bomb.h" />

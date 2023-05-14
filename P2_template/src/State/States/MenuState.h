@@ -6,11 +6,21 @@
 
 class MenuState: public State{
 private:
-    ofTrueTypeFont text;
+	// Fuentes
+	ofTrueTypeFont title;
+	ofTrueTypeFont titleShadow;
+	ofTrueTypeFont pressStart;
+
+	// Textos
+	string titleTxt;
+	string startTxt;
+
+	// Variables
+	int alpha;
+	int changeFactor;
 
 public:
-    MenuState(Game *game): State(game, "Menu State"){
-    };
+    MenuState(Game* game);
     
     ~MenuState(){};
     

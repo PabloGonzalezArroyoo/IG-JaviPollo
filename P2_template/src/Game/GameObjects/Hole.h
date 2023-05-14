@@ -8,7 +8,7 @@ private:
 	ofTexture texture;
 
 public:
-	Hole(Game* game, glm::vec3 pos, glm::vec3 dim);
+	Hole(Game* game, vec3 pos, vec3 dim);
 	~Hole();
 
 	virtual void draw();

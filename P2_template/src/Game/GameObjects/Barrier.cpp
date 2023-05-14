@@ -1,7 +1,7 @@
 #include "Barrier.h"
 #include "Player.h"
 
-Barrier::Barrier(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim), initialYPos(pos.y), factor(-1) {
+Barrier::Barrier(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim), initialYPos(pos.y), factor(-1) {
     material.setEmissiveColor(ofColor::darkorange);
 }
 
@@ -26,8 +26,8 @@ void  Barrier::receiveBulletCollision(GameObject* bullet) {
 };
 
 void Barrier::update() {
-    glm::vec3 pos = collider->getPosition();
-    collider->setPosition(glm::vec3(pos.x, pos.y + factor, pos.z));
+    vec3 pos = collider->getPosition();
+    collider->setPosition(vec3(pos.x, pos.y + factor, pos.z));
     pos = collider->getPosition();
 
     if (pos.y <= initialYPos - 150) factor = 1;

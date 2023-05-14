@@ -8,7 +8,7 @@ private:
 	int speed = 2;
 
 public:
-	Bomb(Game* game, glm::vec3 pos, glm::vec3 dim);
+	Bomb(Game* game, vec3 pos, vec3 dim);
 	~Bomb();
 
 	virtual void update();

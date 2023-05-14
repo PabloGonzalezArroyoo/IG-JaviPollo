@@ -1,7 +1,7 @@
 #include "Explosion.h"
 #include "Player.h"
 
-Explosion::Explosion(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim), timer(0) {
+Explosion::Explosion(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim), timer(0) {
     //material.setEmissiveColor(ofColor::cornflowerBlue);
 
 }
