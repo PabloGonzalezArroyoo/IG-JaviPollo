@@ -199,7 +199,10 @@
     <ClCompile Include="src\Game\GameObjects\Oil.cpp" />
     <ClCompile Include="src\Game\GameObjects\PedestrianGenerator.cpp" />
     <ClCompile Include="src\Game\GameObjects\Airplane.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Powerup.cpp" />
     <ClCompile Include="src\Game\GameObjects\Soil.cpp" />
+    <ClCompile Include="src\Game\GameObjects\Train.cpp" />
+    <ClCompile Include="src\Game\GameObjects\TrainGenerator.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\Game\CollisionEngine.cpp" />
@@ -408,7 +411,10 @@
     <ClInclude Include="src\Game\GameObjects\Oil.h" />
     <ClInclude Include="src\Game\GameObjects\PedestrianGenerator.h" />
     <ClInclude Include="src\Game\GameObjects\Airplane.h" />
+    <ClInclude Include="src\Game\GameObjects\Powerup.h" />
     <ClInclude Include="src\Game\GameObjects\Soil.h" />
+    <ClInclude Include="src\Game\GameObjects\Train.h" />
+    <ClInclude Include="src\Game\GameObjects\TrainGenerator.h" />
     <ClInclude Include="src\Game\GameObjects\Wave.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\Game\CollisionEngine.h" />

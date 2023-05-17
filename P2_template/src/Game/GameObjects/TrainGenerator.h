@@ -1,21 +1,22 @@
 #pragma once
 #include "GameObject.h"
-#include "Pedestrian.h"
+#include "Train.h"
 
-class PedestrianGenerator : public GameObject {
+class Train;
+class TrainGenerator : public GameObject {
 private:
 	int maxPedestrians;
 	double time;
 	bool canGenerate;
 
 	vec3 position;
-	Pedestrian* pedestrian;
+	Train* train;
 
 public:
-	PedestrianGenerator(Game* g, vec3 pos);
-	~PedestrianGenerator();
+	TrainGenerator(Game* g, vec3 pos);
+	~TrainGenerator();
 
-	void generatePedestrians();
+	void generateTrains();
 	virtual void update();
 	virtual void draw();
 

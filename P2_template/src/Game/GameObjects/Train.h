@@ -3,32 +3,32 @@
 #define Person_h
 
 #include "GameObject.h"
-#include "PedestrianGenerator.h"
+#include "TrainGenerator.h"
 
 #include "ofxAssimpModelLoader.h"
 
-class PedestrianGenerator;
+class TrainGenerator;
 
-class Pedestrian : public GameObject{
+class Train : public GameObject {
     float speed = -5;
     bool bTurned;
     bool canTurn;
     bool active;
 
-    PedestrianGenerator* generator;
+    TrainGenerator* generator;
+    int life;
 
 public:
-    Pedestrian(Game *game, glm::vec3 pos, glm::vec3 dim, bool turn, PedestrianGenerator* pg = nullptr);
-    ~Pedestrian();
-    
+    Train(Game* game, vec3 pos, vec3 dim, bool turn, TrainGenerator* pg = nullptr);
+    ~Train();
+
     void update() override;
     void draw() override;
-    void receiveCarCollision(Player *car) override;
-    void receiveBulletCollision(GameObject *bullet) override;
+    void receiveCarCollision(Player* car) override;
+    void receiveBulletCollision(GameObject* bullet) override;
 
     void notifyGenerator();
-    
-    void checkCollisions() override;
+
     void turn();
     ofxAssimpModelLoader model;
 

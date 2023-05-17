@@ -28,6 +28,7 @@ void Wall::receivePedestrianCollision(Pedestrian *pedestrian){
     if (pedestrian->getCanTurn()) pedestrian->turn();
     else {
         pedestrian->notifyGenerator();
-        pedestrian->kill();
+        pedestrian->setPosition(vec3(0, 10000, 0));
+        pedestrian->setActive(false);
     }
 }

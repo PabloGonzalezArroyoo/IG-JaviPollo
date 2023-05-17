@@ -625,6 +625,15 @@
     <ClCompile Include="src\Game\GameObjects\Claw.cpp">
       <Filter>src\Game\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Powerup.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\TrainGenerator.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Train.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -1828,6 +1837,15 @@
     </ClInclude>
     <ClInclude Include="src\Constants.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Powerup.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\TrainGenerator.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Train.h">
+      <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

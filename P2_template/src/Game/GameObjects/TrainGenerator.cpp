@@ -1,31 +1,31 @@
-#include "PedestrianGenerator.h"
+#include "TrainGenerator.h"
 #include "Game.h"
 
-PedestrianGenerator::PedestrianGenerator(Game* g, vec3 p) : GameObject(g, p), time(0), canGenerate(true),
-    position(p) {
-    pedestrian = new Pedestrian(game, vec3(0, 10000, 0), vec3(50, 150, 50), false, this);
-    game->addGameObject(pedestrian);
+TrainGenerator::TrainGenerator(Game* g, vec3 p) : GameObject(g, p), time(0), canGenerate(true),
+position(p) {
+    train = new Train(game, vec3(0, 10000, 0), vec3(200, 300, 1400), false, this);
+    game->addGameObject(train);
 }
 
-PedestrianGenerator::~PedestrianGenerator() { }
+TrainGenerator::~TrainGenerator() { }
 
-void PedestrianGenerator::generatePedestrians() {
-    pedestrian->setActive(true);
-    pedestrian->setPosition(position);
+void TrainGenerator::generateTrains() {
+    train->setActive(true);
+    train->setPosition(position + vec3(2000, 0, 0));
 
     canGenerate = false;
 }
 
-void PedestrianGenerator::update() {
+void TrainGenerator::update() {
     if (canGenerate) time += ofGetLastFrameTime();
 
     if (time > 3) {
-        generatePedestrians();
+        generateTrains();
         time = 0;
     }
 }
 
-void PedestrianGenerator::draw() {
+void TrainGenerator::draw() {
     int width = ROAD_WIDTH / 11;
     ofDrawBox(position.x, position.y - 24, position.z, width, 1, 300);
     ofDrawBox(position.x - width * 2, position.y - 24, position.z, width, 1, 300);

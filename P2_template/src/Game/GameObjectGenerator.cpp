@@ -15,6 +15,8 @@
 #include "Hole.h"
 #include "Airplane.h"
 #include "Crane.h"
+#include "Powerup.h"
+#include "TrainGenerator.h"
 
 GameObjectGenerator::GameObjectGenerator(Game *game): game(game){}
 
@@ -103,8 +105,18 @@ void GameObjectGenerator::generateWorld(){
     auto crane = new Crane(game, vec3(400, 100, 1600), CRANES_DIMS);
     game->addGameObject(crane);
 
+    // Powerup
+    auto powerup = new Powerup(game, vec3(-350, -25, 400), vec3(100, 50, 50));
+    game->addGameObject(powerup);
+
     // Generador de peatones
-    auto generator = new PedestrianGenerator(game, vec3(0));
+    for (int i = 0; i < 18; i++) {
+        auto generator = new PedestrianGenerator(game, vec3(ROAD_WIDTH / 2 - 100, -25, 500 * (i + 1)));
+        game->addGameObject(generator);
+        for(int j = 0; j < 6; j++) i++;
+    }
+
+    auto generator = new TrainGenerator(game, vec3(ROAD_WIDTH / 2 - 100, -25, 700));
     game->addGameObject(generator);
 }
 

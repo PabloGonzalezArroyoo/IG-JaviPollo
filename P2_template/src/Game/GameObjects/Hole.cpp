@@ -7,7 +7,7 @@ Hole::Hole(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     plane.set(dim.x, dim.z);
     ofEnableAlphaBlending();
     ofDisableArbTex();
-    ofLoadImage(texture, "hole.png");
+    ofLoadImage(texture, "../../resources/images/hole.png");
 }
 
 Hole::~Hole() { }

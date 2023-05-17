@@ -12,7 +12,7 @@ Game::Game(){
     generator = new GameObjectGenerator(this);
     bDebug = false;
     win = false;
-    scream.load("aaa.wav");
+    scream.load("../../resources/sounds/aaa.wav");
     timer = 0;
 }
 

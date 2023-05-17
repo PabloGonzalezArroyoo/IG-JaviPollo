@@ -2,11 +2,14 @@
 #include "Game.h"
 #include "Bullet.h"
 
-Player::Player(Game *game) : GameObject(game, glm::vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0),
+Player::Player(Game *game) : GameObject(game, vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0),
     soiled(false) {
     
     material.setDiffuseColor(ofColor::blue);
-    
+    model.loadModel("../../resources/models/car_1.fbx");
+    model.setPosition(28, 62, -80);
+    model.setScale(0.35, 0.35, 0.35);
+
     faro.setParent(transform);
     faro.setDiffuseColor(ofColor::yellow);
     faro.setSpotlight();
@@ -22,6 +25,7 @@ void Player::init(){
     bLight = true;
     iniPos = collider->getPosition();
     coins = 0;
+    collider->setHeight(50);
 }
 
 void Player::update(){
@@ -43,17 +47,21 @@ void Player::update(){
 
 void Player::draw(){
     
-    faro.draw();
+    //faro.draw();
     if(bLight)
         faro.enable();
     else
         faro.disable();
     
-    material.begin();
+    transform.transformGL();
+    model.drawFaces();
+    transform.restoreTransformGL();
+
+    /*material.begin();
     {
         collider->draw();
     }
-    material.end();
+    material.end();*/
 }
 
 void Player::drawDebug(){
@@ -124,4 +132,8 @@ void Player::oilMovement() {
         oiled = false;
         turnTime = 0;
     }
+}
+
+void Player::boost(float value) {
+    speed *= value;
 }

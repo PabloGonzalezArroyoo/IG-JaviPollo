@@ -7,7 +7,7 @@ Soil::Soil(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim
     plane.set(dim.x, dim.z);
     ofEnableAlphaBlending();
     ofDisableArbTex();
-    ofLoadImage(texture, "dirt.png");
+    ofLoadImage(texture, "../../resources/images/dirt.png");
     texture.setTextureWrap(GL_REPEAT, GL_REPEAT);
 }
 

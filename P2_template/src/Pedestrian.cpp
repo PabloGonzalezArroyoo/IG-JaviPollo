@@ -5,8 +5,8 @@
 #include "Game.h"
 
 Pedestrian::Pedestrian(Game *game, glm::vec3 pos, glm::vec3 dim, bool turn, PedestrianGenerator* pg): GameObject(game, pos, dim),
-    canTurn(turn), generator(pg) {
-    model.loadModel("astroBoy_walk.dae");
+    canTurn(turn), generator(pg), active(false) {
+    model.loadModel("../../resources/models/astroBoy_walk.dae");
     
     collider->move(0, dim.y/2 - 25, 0);
     model.setRotation(0, 180, 1, 0, 0);
@@ -24,32 +24,34 @@ Pedestrian::~Pedestrian(){
 }
 
 void Pedestrian::update() {
-    model.update();
-    transform.move(transform.getZAxis() * -speed);
-    bTurned = false;
+    if (active) {
+        model.update();
+        transform.move(transform.getZAxis() * -speed);
+        bTurned = false;
+    }
 };
 void Pedestrian::draw(){
-    transform.transformGL();
-    model.drawFaces();
-    
-  //  ofDrawAxis(200);
-    transform.restoreTransformGL();
-
-    //collider->drawWireframe();
-    
+    if (active) {
+        transform.transformGL();
+        model.drawFaces();
+        transform.restoreTransformGL();
+    }
 };
 
 void Pedestrian::receiveCarCollision(Player *car) {
-    kill();
+    setPosition(vec3(0, 10000, 0));
+    setActive(false);
     game->doScream();
+    notifyGenerator();
 };
 
 void Pedestrian::receiveBulletCollision(GameObject *bullet) {
-    
     bullet->kill();
-    kill();
+    game->doScream();
+    setPosition(vec3(0, 10000, 0));
+    setActive(false);
     game->getPlayer()->addCoins(1000);
- 
+    notifyGenerator();
 };
 
 void Pedestrian::turn(){

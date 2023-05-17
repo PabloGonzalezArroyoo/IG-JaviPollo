@@ -7,9 +7,9 @@ MenuState::MenuState(Game* game) : State(game, "Menu State"), alpha(255), change
     startTxt = "Press SPACE to start";
 
     // Cargar fuente
-    title.load("diesel.ttf", 150);
-    titleShadow.load("diesel.ttf", 150);
-    pressStart.load("diesel.ttf", 80);
+    title.load("../../resources/fonts/diesel.ttf", 150);
+    titleShadow.load("../../resources/fonts/diesel.ttf", 150);
+    pressStart.load("../../resources/fonts/diesel.ttf", 80);
 };
 
 void MenuState::update(){

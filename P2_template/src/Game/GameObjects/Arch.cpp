@@ -3,7 +3,7 @@
 
 Arch::Arch(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim), coinsNumber(0), timer(0) {
     material.setEmissiveColor(ofColor::cornflowerBlue);
-    font.load("starborn.ttf", 300);
+    font.load("../../resources/fonts/starborn.ttf", 300);
     transform.rotate(-180, 0, 1, 0);
     ofEnableNormalizedTexCoords();
     ofDisableArbTex();
