@@ -14,6 +14,10 @@ Game::Game(){
     win = false;
     scream.load("../../resources/sounds/aaa.wav");
     timer = 0;
+
+    speed.loadFont("../../resources/fonts/aldo.ttf", 30);
+    coins.loadFont("../../resources/fonts/aldo.ttf", 30);
+    timerF.loadFont("../../resources/fonts/aldo.ttf", 30);
 }
 
 Game::~Game(){
@@ -51,16 +55,16 @@ void Game::update(){
         timer += ofGetLastFrameTime();
     }
 
-    if (win) {
-        gsm->changeState(new ResultState(this));
-    }
+    if (win) gsm->changeState(new ResultState(this));
 }
 
 void Game::draw(){
     if (dynamic_cast<PlayState*>(gsm->currentState()) != nullptr) {
         ofEnableLighting();
         ofEnableDepthTest();
-        
+
+        drawHUD();
+
         cam.begin();
         {
             if(bDebug) gameObjects->drawDebug();
@@ -71,6 +75,55 @@ void Game::draw(){
         ofDisableLighting();
         ofDisableDepthTest();
     }
+}
+
+void Game::drawHUD() {
+    ofPushMatrix();
+    ofTranslate(0, ofGetHeight() - 60);
+
+    ofSetColor(255);
+    string text = twoDecimalFloatString(getEllapsedTime());
+    timerF.drawString("Time: " + text, 10, 45);
+
+    text = to_string(getPlayer()->getCoins());
+    coins.drawString(text, ofGetWidth() / 2 - coins.stringWidth(text) / 2, 45);
+
+    text = twoDecimalFloatString(getPlayer()->getSpeed());
+    speed.drawString("Speed: " + text + " u/s", ofGetWidth() - 90 * 3, 45);
+
+    ofSetColor(0);
+    ofDrawRectangle(0, 5, ofGetWidth(), 55);
+    ofSetColor(255);
+    ofDrawRectangle(0, 0, ofGetWidth(), 60);
+
+    ofPopMatrix();
+}
+
+void Game::drawCoins() {
+    ofPushMatrix();
+    ofTranslate(0, ofGetHeight() - 60);
+
+    ofTranslate(0, 20);
+    ofDrawBitmapString("Coins: " + ofToString(getPlayer()->getCoins(), 2), 0, 0);
+
+    ofPopMatrix();
+}
+
+string Game::twoDecimalFloatString(float f) {
+    string toString = to_string(f);
+    string endText = "";
+    int i = 0; bool fin = false;
+
+    while (i < toString.size() && !fin) {
+        endText += toString[i];
+        if (toString[i] == '.') {
+            for (int k = i + 1; k < i + 3; k++) endText += toString[k];
+            fin = true;
+        }
+        i++;
+    }
+
+    return endText;
 }
 
 Player * Game::getPlayer(){

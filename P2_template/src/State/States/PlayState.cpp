@@ -31,13 +31,6 @@ void PlayState::draw(){
         ofDrawBitmapString("Fps: " + ofToString(ofGetFrameRate()), 0, 0);
         ofTranslate(0, 20);
         ofDrawBitmapString(name, 0, 0);
-        ofTranslate(0, 20);
-        ofDrawBitmapString("Time: " + ofToString(game->getEllapsedTime(), 2), 0, 0);
-        ofTranslate(0, 20);
-        ofDrawBitmapString("Speed: " + ofToString(game->getPlayer()->getSpeed(), 2), 0, 0);
-        ofTranslate(0, 20);
-        ofDrawBitmapString("Coins: " + ofToString(game->getPlayer()->getCoins(), 2), 0, 0);
-
     }
     ofPopMatrix();
     game->draw();

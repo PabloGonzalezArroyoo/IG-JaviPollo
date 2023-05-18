@@ -4,7 +4,7 @@
 #include "State.h"
 #include "Game.h"
 
-class MenuState: public State{
+class MenuState: public State {
 private:
 	// Fuentes
 	ofTrueTypeFont title;

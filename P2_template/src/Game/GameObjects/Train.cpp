@@ -17,9 +17,7 @@ canTurn(turn), generator(pg), active(false), life(3) {
     bTurned = false;
 }
 
-Train::~Train() {
-
-}
+Train::~Train() { }
 
 void Train::update() {
     if (active) {
@@ -39,7 +37,6 @@ void Train::draw() {
         transform.transformGL();
         model.drawFaces();
         transform.restoreTransformGL();
-        collider->draw();
     }
 };
 

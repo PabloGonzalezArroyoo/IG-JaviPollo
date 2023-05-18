@@ -9,7 +9,7 @@ MenuState::MenuState(Game* game) : State(game, "Menu State"), alpha(255), change
     // Cargar fuente
     title.load("../../resources/fonts/diesel.ttf", 150);
     titleShadow.load("../../resources/fonts/diesel.ttf", 150);
-    pressStart.load("../../resources/fonts/diesel.ttf", 80);
+    pressStart.load("../../resources/fonts/diesel.ttf", 70);
 };
 
 void MenuState::update(){

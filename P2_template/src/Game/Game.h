@@ -22,6 +22,10 @@ class Game : public StateMachine{
     ofSoundPlayer scream;
 
     GameStateMachine* gsm;
+
+    ofTrueTypeFont speed;
+    ofTrueTypeFont coins;
+    ofTrueTypeFont timerF;
     
 public:    
     Game();
@@ -31,6 +35,12 @@ public:
     void draw();
     void toggleDebug();
     void playerWins();
+
+    void drawHUD();
+    void drawSpeed();
+    void drawCoins();
+    //void drawTime(string t);
+    string twoDecimalFloatString(float f);
     
     Player *getPlayer();
     vector<GameObject *> getCollisions(GameObject *gameObject);
