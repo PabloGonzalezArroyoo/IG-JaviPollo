@@ -23,7 +23,8 @@ void PlayState::update(){
 };
     
 void PlayState::draw(){
-    ofBackground(0);
+    ofBackground(7, 19, 54);
+
     ofPushMatrix();
     {
         ofTranslate(10, 0);

@@ -26,6 +26,9 @@ class Game : public StateMachine{
     ofTrueTypeFont speed;
     ofTrueTypeFont coins;
     ofTrueTypeFont timerF;
+
+
+    ofSoundPlayer coin;
     
 public:    
     Game();
@@ -48,5 +51,7 @@ public:
 
     inline GameStateMachine* getGameStateMachine() { return gsm; }
     
+    // Sonidos
+    inline void coinSound() { coin.play(); }
 };
 #endif

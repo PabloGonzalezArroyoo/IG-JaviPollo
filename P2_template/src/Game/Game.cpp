@@ -18,6 +18,8 @@ Game::Game(){
     speed.loadFont("../../resources/fonts/aldo.ttf", 30);
     coins.loadFont("../../resources/fonts/aldo.ttf", 30);
     timerF.loadFont("../../resources/fonts/aldo.ttf", 30);
+
+    coin.load("../../resources/sounds/coin.wav");
 }
 
 Game::~Game(){
@@ -50,10 +52,8 @@ void Game::init(){
 }
 
 void Game::update(){
-    if (dynamic_cast<PlayState*>(gsm->currentState()) != nullptr) {
-        gameObjects->update();
-        timer += ofGetLastFrameTime();
-    }
+    gameObjects->update();
+    timer += ofGetLastFrameTime();
 
     if (win) gsm->changeState(new ResultState(this));
 }

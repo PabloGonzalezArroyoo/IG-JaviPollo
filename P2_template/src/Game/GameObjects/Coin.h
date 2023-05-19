@@ -4,7 +4,6 @@
 #include "ofxAssimpModelLoader.h"
 
 class Coin : public GameObject{
-    
 public:
     Coin(Game *game, vec3 pos, vec3 dim);
     ~Coin();
