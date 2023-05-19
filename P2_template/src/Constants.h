@@ -18,7 +18,7 @@ const vec3 GOAL_POS = vec3(0, ROAD_POS.y, ROAD_POS.z + ROAD_LENGTH / 2);
 const vec3 GOAL_DIMS = vec3(ROAD_WIDTH, 100, 100);
 
 // OBSTACLES
-const vec3 OBSTACLES_DIMS = vec3(100, 150, 100);
+const vec3 OBSTACLES_DIMS = vec3(100, 100, 100);
 
 // COINS
 const vec3 COINS_DIMS = vec3(50);
@@ -40,6 +40,11 @@ const vec3 HOLES_DIMS = vec3(400, 0, 200);
 
 // AIRPLANE
 const vec3 AIRPLANE_DIMS = vec3(300, 100, 200);
+const vec3 BOMBS_DIMS = vec3(60);
+const vec3 EXPLOSIONS_DIMS = vec3(200);
 
 // CRANE
 const vec3 CRANES_DIMS = vec3(100, 600, 100);
+
+// TRAIN
+const int TRAIN_MAX_LIFE = 3;

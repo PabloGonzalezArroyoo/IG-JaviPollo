@@ -3,7 +3,9 @@
 #include "Game.h"
 
 Airplane::Airplane(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim), timer(0), bTurned(false) {
-    material.setEmissiveColor(ofColor::orange);
+    model.loadModel("../../resources/models/plane.fbx");
+    model.setRotation(0, 180, 1, 0, 0);
+    model.setScale(0.6, 0.6, 0.6);
 
     transform.rotateDeg(90, 0, 1, 0);
     speed = 6;
@@ -12,12 +14,9 @@ Airplane::Airplane(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim),
 Airplane::~Airplane() {}
 
 void Airplane::draw() {
-
-    material.begin();
-    {
-        collider->draw();
-    }
-    material.end();
+    transform.transformGL();
+    model.drawFaces();
+    transform.restoreTransformGL();
 }
 
 void Airplane::update() {
@@ -32,7 +31,7 @@ void Airplane::update() {
     timer += ofGetLastFrameTime();
 
     if (timer > 3) {
-        auto bomb = new Bomb(game, transform.getPosition(), vec3(30));
+        auto bomb = new Bomb(game, transform.getPosition(), BOMBS_DIMS);
         game->addGameObject(bomb);
         timer = 0;
     }

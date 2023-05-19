@@ -2,8 +2,6 @@
 
 #include "GameObject.h"
 
-// HACER LA TEXTURA ANIMADA
-
 class Arch : public GameObject {
 private:
 	ofFbo fbo;
@@ -18,8 +16,9 @@ public:
 	Arch(Game* game, vec3 pos, vec3 dim);
 	~Arch();
 
+	virtual void update();
 	virtual void draw();
 	void receiveCarCollision(Player* car) override;
 
-	void renderNumber();
+	void randomNumber();
 };

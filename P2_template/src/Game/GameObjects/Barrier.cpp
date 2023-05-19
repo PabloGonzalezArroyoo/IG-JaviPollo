@@ -3,11 +3,15 @@
 
 Barrier::Barrier(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim), initialYPos(pos.y), factor(-1) {
     material.setEmissiveColor(ofColor::darkorange);
+    //model.loadModel("../../resources/models/barrier.fbx");
 }
 
 Barrier::~Barrier() {}
 
 void Barrier::draw() {
+    //transform.transformGL();
+    //model.drawFaces();
+    //transform.restoreTransformGL();
 
     material.begin();
     {

@@ -26,9 +26,5 @@ void  Wall::receiveBulletCollision(GameObject *bullet){
 
 void Wall::receivePedestrianCollision(Pedestrian *pedestrian){
     if (pedestrian->getCanTurn()) pedestrian->turn();
-    else {
-        pedestrian->notifyGenerator();
-        pedestrian->setPosition(vec3(0, 10000, 0));
-        pedestrian->setActive(false);
-    }
+    else pedestrian->deactivatePedestrian();
 }

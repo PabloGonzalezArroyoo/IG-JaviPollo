@@ -59,53 +59,42 @@ void Game::update(){
 }
 
 void Game::draw(){
-    if (dynamic_cast<PlayState*>(gsm->currentState()) != nullptr) {
-        ofEnableLighting();
-        ofEnableDepthTest();
-
-        drawHUD();
-
-        cam.begin();
-        {
-            if(bDebug) gameObjects->drawDebug();
-            else gameObjects->draw();
-        }
-        cam.end();
+    ofEnableLighting();
+    ofEnableDepthTest();
     
-        ofDisableLighting();
-        ofDisableDepthTest();
+    drawHUD();
+    
+    cam.begin();
+    {
+        if(bDebug) gameObjects->drawDebug();
+        else gameObjects->draw();
     }
+    cam.end();
+    
+    ofDisableLighting();
+    ofDisableDepthTest();
 }
 
 void Game::drawHUD() {
     ofPushMatrix();
-    ofTranslate(0, ofGetHeight() - 60);
+    {
+        ofTranslate(0, ofGetHeight() - 60);
 
-    ofSetColor(255);
-    string text = twoDecimalFloatString(getEllapsedTime());
-    timerF.drawString("Time: " + text, 10, 45);
+        ofSetColor(255);
+        string text = twoDecimalFloatString(getEllapsedTime());
+        timerF.drawString("Time: " + text, 10, 45);
 
-    text = to_string(getPlayer()->getCoins());
-    coins.drawString(text, ofGetWidth() / 2 - coins.stringWidth(text) / 2, 45);
+        text = to_string(getPlayer()->getCoins());
+        coins.drawString(text, ofGetWidth() / 2 - coins.stringWidth(text) / 2, 45);
 
-    text = twoDecimalFloatString(getPlayer()->getSpeed());
-    speed.drawString("Speed: " + text + " u/s", ofGetWidth() - 90 * 3, 45);
+        text = twoDecimalFloatString(getPlayer()->getSpeed());
+        speed.drawString("Speed: " + text + " u/s", ofGetWidth() - 90 * 3, 45);
 
-    ofSetColor(0);
-    ofDrawRectangle(0, 5, ofGetWidth(), 55);
-    ofSetColor(255);
-    ofDrawRectangle(0, 0, ofGetWidth(), 60);
-
-    ofPopMatrix();
-}
-
-void Game::drawCoins() {
-    ofPushMatrix();
-    ofTranslate(0, ofGetHeight() - 60);
-
-    ofTranslate(0, 20);
-    ofDrawBitmapString("Coins: " + ofToString(getPlayer()->getCoins(), 2), 0, 0);
-
+        ofSetColor(0);
+        ofDrawRectangle(0, 5, ofGetWidth(), 55);
+        ofSetColor(255);
+        ofDrawRectangle(0, 0, ofGetWidth(), 60);
+    }
     ofPopMatrix();
 }
 

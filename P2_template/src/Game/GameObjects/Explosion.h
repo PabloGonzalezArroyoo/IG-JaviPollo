@@ -2,9 +2,13 @@
 
 #include "GameObject.h"
 
+#include "ofxAssimpModelLoader.h"
+
 class Explosion : public GameObject {
 private:
 	double timer;
+
+	ofxAssimpModelLoader model;
 
 public:
 	Explosion(Game* game, vec3 pos, vec3 dim);

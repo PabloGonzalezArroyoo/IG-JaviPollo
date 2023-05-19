@@ -7,6 +7,8 @@ Bullet::Bullet(Game *game, ofNode otherTransform)
 {
         transform.setGlobalOrientation(otherTransform.getGlobalOrientation());
     material.setEmissiveColor(ofColor::red);
+    model.loadModel("../../resources/models/bullet.fbx");
+    model.setScale(0.1, 0.1, 0.1);
 }
 
 Bullet::~Bullet(){}
@@ -19,13 +21,9 @@ void Bullet::update(){
 };
 
 void Bullet::draw(){
-    
-    material.begin();
-    {
-        collider->draw();
-    }
-    material.end();
-    
+    transform.transformGL();
+    model.drawFaces();
+    transform.restoreTransformGL();
 };
 
 void Bullet::checkCollisions(){

@@ -3,7 +3,7 @@
 
 TrainGenerator::TrainGenerator(Game* g, vec3 p) : GameObject(g, p), time(0), canGenerate(true),
 position(p) {
-    train = new Train(game, vec3(0, 10000, 0), vec3(200, 300, 1400), false, this);
+    train = new Train(game, vec3(0, 10000, 0), vec3(200, 300, 1400), this);
     game->addGameObject(train);
 }
 

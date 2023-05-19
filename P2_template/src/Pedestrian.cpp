@@ -19,15 +19,15 @@ Pedestrian::Pedestrian(Game *game, glm::vec3 pos, glm::vec3 dim, bool turn, Pede
     speed = 6;
     bTurned = false;
 }
-Pedestrian::~Pedestrian(){
-    
-}
+Pedestrian::~Pedestrian() { }
 
 void Pedestrian::update() {
     if (active) {
         model.update();
         transform.move(transform.getZAxis() * -speed);
         bTurned = false;
+
+        if (transform.getPosition().x <= -ROAD_WIDTH / 2) deactivatePedestrian();
     }
 };
 void Pedestrian::draw(){
@@ -38,20 +38,22 @@ void Pedestrian::draw(){
     }
 };
 
-void Pedestrian::receiveCarCollision(Player *car) {
+void Pedestrian::deactivatePedestrian() {
     setPosition(vec3(0, 10000, 0));
     setActive(false);
-    game->doScream();
     notifyGenerator();
+}
+
+void Pedestrian::receiveCarCollision(Player *car) {
+    deactivatePedestrian();
+    game->doScream();
 };
 
 void Pedestrian::receiveBulletCollision(GameObject *bullet) {
     bullet->kill();
     game->doScream();
-    setPosition(vec3(0, 10000, 0));
-    setActive(false);
+    deactivatePedestrian();
     game->getPlayer()->addCoins(1000);
-    notifyGenerator();
 };
 
 void Pedestrian::turn(){

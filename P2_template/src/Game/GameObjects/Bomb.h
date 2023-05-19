@@ -2,10 +2,13 @@
 
 #include "GameObject.h"
 #include "Explosion.h"
+#include "ofxAssimpModelLoader.h"
 
 class Bomb : public GameObject {
 private:
 	int speed = 2;
+
+	ofxAssimpModelLoader model;
 
 public:
 	Bomb(Game* game, vec3 pos, vec3 dim);

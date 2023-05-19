@@ -2,8 +2,11 @@
 
 #include "GameObject.h"
 
-class Obstacle : public GameObject {
+#include "ofxAssimpModelLoader.h"
 
+class Obstacle : public GameObject {
+private:
+    ofxAssimpModelLoader model;
 
 public:
     Obstacle(Game* game, vec3 pos, vec3 dim);

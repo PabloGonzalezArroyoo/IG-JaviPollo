@@ -7,8 +7,9 @@ Player::Player(Game *game) : GameObject(game, vec3(100)), oiled(false), oilTime(
     
     material.setDiffuseColor(ofColor::blue);
     model.loadModel("../../resources/models/car_1.fbx");
-    model.setPosition(28, 62, -80);
-    model.setScale(0.35, 0.35, 0.35);
+    model.setPosition(0, -50, -75);
+    model.setScale(0.4, 0.4, 0.4);
+    model.setRotation(0, 180, 0, 0, 1);
 
     faro.setParent(transform);
     faro.setDiffuseColor(ofColor::yellow);

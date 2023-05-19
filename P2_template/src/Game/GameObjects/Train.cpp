@@ -3,8 +3,8 @@
 #include "Player.h"
 #include "Game.h"
 
-Train::Train(Game* game, glm::vec3 pos, glm::vec3 dim, bool turn, TrainGenerator* pg) : GameObject(game, pos, dim),
-canTurn(turn), generator(pg), active(false), life(3) {
+Train::Train(Game* game, glm::vec3 pos, glm::vec3 dim, TrainGenerator* pg) : GameObject(game, pos, dim),
+    generator(pg), active(false), life(3) {
     model.loadModel("../../resources/models/train.fbx");
 
     collider->move(0, dim.y / 2 - 25, 0);
@@ -14,7 +14,6 @@ canTurn(turn), generator(pg), active(false), life(3) {
 
     transform.rotateDeg(90, 0, 1, 0);
     speed = 30;
-    bTurned = false;
 }
 
 Train::~Train() { }
@@ -23,15 +22,11 @@ void Train::update() {
     if (active) {
         model.update();
         transform.move(transform.getZAxis() * -speed);
-        bTurned = false;
 
-        if (transform.getPosition().x < -ROAD_WIDTH * 2) {
-            setPosition(vec3(0, 10000, 0));
-            setActive(false);
-            notifyGenerator();
-        }
+        if (transform.getPosition().x < -ROAD_WIDTH * 2) deactivateTrain();
     }
 };
+
 void Train::draw() {
     if (active) {
         transform.transformGL();
@@ -40,31 +35,26 @@ void Train::draw() {
     }
 };
 
-void Train::receiveCarCollision(Player* car) {
-    car->setToInitPos();
+void Train::deactivateTrain() {
     setPosition(vec3(0, 10000, 0));
     setActive(false);
     notifyGenerator();
+    life = TRAIN_MAX_LIFE;
+}
+
+void Train::receiveCarCollision(Player* car) {
+    car->setToInitPos();
+    deactivateTrain();
 };
 
 void Train::receiveBulletCollision(GameObject* bullet) {
     life--;
     if (life <= 0) {
-        setPosition(vec3(0, 10000, 0));
-        setActive(false);
+        deactivateTrain();
         game->getPlayer()->addCoins(1000);
-        notifyGenerator();
     }
     bullet->kill();    
 };
-
-void Train::turn() {
-    if (!bTurned) {
-        transform.rotateDeg(180, 0, 1, 0);
-        transform.move(transform.getZAxis() * -speed);
-        bTurned = true;
-    }
-}
 
 void Train::notifyGenerator() {
     if (generator != nullptr) generator->setGenerate();

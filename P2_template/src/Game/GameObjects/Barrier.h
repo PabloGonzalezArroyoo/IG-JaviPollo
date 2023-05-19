@@ -1,11 +1,14 @@
 #pragma once
 
 #include "GameObject.h"
+#include "ofxAssimpModelLoader.h"
 
 class Barrier : public GameObject {
 private:
     int factor;
     int initialYPos;
+
+    ofxAssimpModelLoader model;
 
 public:
 

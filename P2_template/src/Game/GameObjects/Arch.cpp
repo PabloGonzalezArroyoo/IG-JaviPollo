@@ -3,15 +3,15 @@
 
 Arch::Arch(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim), coinsNumber(0), timer(0) {
     material.setEmissiveColor(ofColor::cornflowerBlue);
-    font.load("../../resources/fonts/starborn.ttf", 300);
+    font.load("../../resources/fonts/starborn.ttf", 150);
     transform.rotate(-180, 0, 1, 0);
-    ofEnableNormalizedTexCoords();
-    ofDisableArbTex();
 
     position = pos;
     dimensions = dim;
-
-    fbo.allocate(ofGetWidth(), ofGetHeight());
+    ofEnableNormalizedTexCoords();
+    ofDisableArbTex();
+    ofEnableAlphaBlending();
+    fbo.allocate(400, 400);
 }
 
 Arch::~Arch() { }
@@ -21,11 +21,15 @@ void Arch::receiveCarCollision(Player* car) {
     this->kill();
 }
 
+void Arch::update() {
+    randomNumber();
+}
+
 void Arch::draw() {
     fbo.getTexture().bind();
     {
         transform.transformGL();
-        renderNumber();
+        fbo.draw(-400 / 2, -300 / 2, 400, 300);
         material.begin();
         {
             // Palo izquierdo
@@ -35,7 +39,7 @@ void Arch::draw() {
             ofDrawBox(position.x + dimensions.x / 4, 0, 0,
                 dimensions.x / 8, dimensions.y, dimensions.z);
             // Palo central
-            ofDrawBox(position.x - dimensions.x / 4.3, position.y + 50, 0,
+            ofDrawBox(position.x - dimensions.x / 4.3, position.y + dimensions.y / 4.5, 0,
                 dimensions.x + 40, dimensions.y / 8, dimensions.z);
         }
         material.end();
@@ -45,21 +49,21 @@ void Arch::draw() {
     fbo.getTexture().unbind();
 }
 
-void Arch::renderNumber() {
-    fbo.begin();
-
-    ofClear(0); // Limpiar el fondo del FBO
-    ofSetColor(255, 255, 255);
+void Arch::randomNumber() {
     timer += ofGetLastFrameTime();
     if (timer > 1) {
         coinsNumber = rand() % 30 + 1;
         timer = 0;
+
+        fbo.begin();
+        {
+            ofClear(0); // Limpiar el fondo del FBO
+            ofSetColor(255, 255, 255);
+            string coinsText = to_string(coinsNumber);
+            font.drawString(coinsText,
+                dimensions.x / 2 - font.stringWidth(coinsText) / 2,
+                dimensions.y / 2 + font.stringHeight(coinsText) / 2);
+        }
+        fbo.end();
     }
-
-    font.drawString(to_string(coinsNumber), 
-        dimensions.x / 2 + font.stringWidth(to_string(coinsNumber)) / 4,
-        dimensions.y / 2 + font.stringHeight(to_string(coinsNumber)) / 4);
-    fbo.end();
-
-    fbo.draw(-400/2, -300/2, 400, 300);
 }

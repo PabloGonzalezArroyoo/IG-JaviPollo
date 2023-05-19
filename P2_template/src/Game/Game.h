@@ -37,9 +37,6 @@ public:
     void playerWins();
 
     void drawHUD();
-    void drawSpeed();
-    void drawCoins();
-    //void drawTime(string t);
     string twoDecimalFloatString(float f);
     
     Player *getPlayer();

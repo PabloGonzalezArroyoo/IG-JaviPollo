@@ -27,6 +27,7 @@ public:
     void receiveBulletCollision(GameObject *bullet) override;
 
     void notifyGenerator();
+    void deactivatePedestrian();
     
     void checkCollisions() override;
     void turn();

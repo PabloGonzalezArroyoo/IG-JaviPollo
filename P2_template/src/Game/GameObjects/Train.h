@@ -11,7 +11,6 @@ class TrainGenerator;
 
 class Train : public GameObject {
     float speed = -5;
-    bool bTurned;
     bool canTurn;
     bool active;
 
@@ -19,7 +18,7 @@ class Train : public GameObject {
     int life;
 
 public:
-    Train(Game* game, vec3 pos, vec3 dim, bool turn, TrainGenerator* pg = nullptr);
+    Train(Game* game, vec3 pos, vec3 dim, TrainGenerator* pg = nullptr);
     ~Train();
 
     void update() override;
@@ -28,11 +27,10 @@ public:
     void receiveBulletCollision(GameObject* bullet) override;
 
     void notifyGenerator();
+    void deactivateTrain();
 
-    void turn();
     ofxAssimpModelLoader model;
 
-    inline bool getCanTurn() { return canTurn; }
     inline void setActive(bool act) { active = act; }
     inline void setPosition(vec3 pos) { transform.setPosition(pos); }
 };
