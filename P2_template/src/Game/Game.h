@@ -35,9 +35,10 @@ class Game : public StateMachine{
     ofTrueTypeFont coins;
     ofTrueTypeFont timerF;
 
-
     vector<ofSoundPlayer> sounds;
     vector<ofSoundPlayer> musics;
+
+    int points;
     
 public:    
     Game();
@@ -55,12 +56,15 @@ public:
     vector<GameObject *> getCollisions(GameObject *gameObject);
     void addGameObject(GameObject *gameobject);
     
+    inline int getPoints() { return points; }
+    inline void addPoints(int n) { points += n; }
+    
     float getEllapsedTime();
     void doScream();
 
     inline GameStateMachine* getGameStateMachine() { return gsm; }
     
-    // Sonidos
+    // Sonidos y música
     inline void playSound(int s) {
         if (s == SHOOT) sounds[s].play();
         else if (!sounds[s].isPlaying()) sounds[s].play();

@@ -13,7 +13,7 @@ Game::Game(){
     bDebug = false;
     win = false;
     scream.load("../../resources/sounds/aaa.wav");
-    timer = 0;
+    timer = 0; points = 0;
 
     speed.loadFont("../../resources/fonts/aldo.ttf", 30);
     coins.loadFont("../../resources/fonts/aldo.ttf", 30);

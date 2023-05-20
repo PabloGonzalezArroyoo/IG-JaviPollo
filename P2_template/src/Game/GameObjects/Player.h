@@ -10,7 +10,6 @@ class Game;
 #define MAX_SPEED 100
 
 class Player : public GameObject{
-    
 
     ofxAssimpModelLoader model;
 
@@ -59,8 +58,8 @@ public:
 
     inline void setCoins(int x) { coins = x; }
     
+    inline void setInitPos(vec3 pos) { iniPos = pos; }
     inline void setToInitPos() { 
-        collider->setPosition(iniPos); 
         transform.setPosition(iniPos);
         speed = 0;
     }

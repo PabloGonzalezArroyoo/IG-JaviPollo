@@ -57,12 +57,6 @@ void Player::draw(){
     transform.transformGL();
     model.drawFaces();
     transform.restoreTransformGL();
-
-    /*material.begin();
-    {
-        collider->draw();
-    }
-    material.end();*/
 }
 
 void Player::drawDebug(){
@@ -108,6 +102,7 @@ float Player::getSpeed(){
 
 void Player::addCoins(int n){
     coins += n;
+    game->addPoints(n);
 }
 
 int Player::getCoins(){

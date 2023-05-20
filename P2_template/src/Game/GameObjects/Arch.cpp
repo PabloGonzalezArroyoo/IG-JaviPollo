@@ -31,22 +31,24 @@ void Arch::draw() {
     fbo.getTexture().bind();
     {
         transform.transformGL();
+        ofSetColor(ofColor::red);
         fbo.draw(-400 / 2, -300 / 2, 400, 300);
+        ofSetColor(255);
+        transform.restoreTransformGL();
         material.begin();
         {
-            // Palo izquierdo
-            ofDrawBox(position.x - dimensions.x / 1.4, 0, 0,
-                dimensions.x / 8, dimensions.y, dimensions.z);
-            // Palo derecho
-            ofDrawBox(position.x + dimensions.x / 4, 0, 0,
-                dimensions.x / 8, dimensions.y, dimensions.z);
-            // Palo central
-            ofDrawBox(position.x - dimensions.x / 4.3, position.y + dimensions.y / 4.5, 0,
-                dimensions.x + 40, dimensions.y / 8, dimensions.z);
+            collider->draw();
+            //// Palo izquierdo
+            //ofDrawBox(position.x - dimensions.x / 2, 0, 0,
+            //    dimensions.x / 8, dimensions.y, dimensions.z);
+            //// Palo derecho
+            //ofDrawBox(position.x + dimensions.x / 2, 0, 0,
+            //    dimensions.x / 8, dimensions.y, dimensions.z);
+            //// Palo central
+            //ofDrawBox(position.x, position.y + dimensions.y / 4.5, 0,
+            //    dimensions.x + 40, dimensions.y / 8, dimensions.z);
         }
         material.end();
-        transform.restoreTransformGL();
-        //collider->draw();
     }
     fbo.getTexture().unbind();
 }

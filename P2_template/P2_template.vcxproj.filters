@@ -634,6 +634,9 @@
     <ClCompile Include="src\Game\GameObjects\Train.cpp">
       <Filter>src\Game\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="src\Game\GameObjects\Checkpoint.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -1845,6 +1848,9 @@
       <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="src\Game\GameObjects\Train.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameObjects\Checkpoint.h">
       <Filter>src\Game\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
