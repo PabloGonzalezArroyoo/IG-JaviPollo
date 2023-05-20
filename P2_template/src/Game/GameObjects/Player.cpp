@@ -116,6 +116,7 @@ int Player::getCoins(){
 void Player::shoot(){
     coins--;
     game->addGameObject(new Bullet(game, transform));
+    game->playSound(SHOOT);
 }
 
 void Player::oilMovement() {

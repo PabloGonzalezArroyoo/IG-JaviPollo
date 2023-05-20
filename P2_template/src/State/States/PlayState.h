@@ -6,6 +6,9 @@
 
 
 class PlayState: public State{
+private:
+    ofSoundPlayer music;
+
 public:
     PlayState(Game *game);
     
@@ -14,6 +17,8 @@ public:
     void update();
     void draw();
     void keyPressed(int key);
+
+    void pauseMusic(bool pause);
         
 };
 #endif

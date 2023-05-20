@@ -44,6 +44,7 @@ void Train::deactivateTrain() {
 
 void Train::receiveCarCollision(Player* car) {
     car->setToInitPos();
+    game->playSound(TRAIN);
     deactivateTrain();
 };
 

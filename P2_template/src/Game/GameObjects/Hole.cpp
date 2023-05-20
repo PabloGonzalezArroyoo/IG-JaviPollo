@@ -1,5 +1,6 @@
 #include "Hole.h"
 #include "Player.h"
+#include "Game.h"
 
 Hole::Hole(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     plane.setParent(transform);
@@ -12,17 +13,9 @@ Hole::Hole(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
 
 Hole::~Hole() { }
 
-void Hole::receiveCarCollision(Player* car) {
-    auto carCollider = this->getCollider();
-    auto holeCollider = this->getCollider();
-    vec3 carPos = carCollider->getPosition();
-    vec3 holePos = holeCollider->getPosition();
-    
-    /*if (carPos.x > holePos.x && carPos.x < holePos.x + holeCollider->getSize().x &&
-        carPos.z < holePos.z && carPos.z < holePos.z + holeCollider->getSize().z) {
-        car->setToInitPos();
-    }*/
+void Hole::receiveCarCollision(Player* car) {    
     car->setToInitPos();
+    game->playSound(HOLE);
 }
 
 void Hole::draw() {

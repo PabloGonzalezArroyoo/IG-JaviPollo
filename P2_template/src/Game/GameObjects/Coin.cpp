@@ -26,13 +26,13 @@ void Coin::draw(){
 
 void Coin::receiveCarCollision(Player *car){
     car->addCoins(5);
-    game->coinSound();
+    game->playSound(COIN);
     kill();
 }
 
 void Coin::receiveBulletCollision(GameObject *bullet){
     bullet->kill();
-    game->coinSound();
+    game->playSound(COIN);
     kill();
     game->getPlayer()->addCoins(50);
 }

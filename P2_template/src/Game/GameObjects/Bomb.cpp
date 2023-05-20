@@ -14,6 +14,7 @@ Bomb::~Bomb() { }
 
 void Bomb::receiveCarCollision(Player* car) {
     car->setToInitPos();
+    game->playSound(EXPLOSION);
     this->kill();
 }
 
@@ -31,10 +32,4 @@ void Bomb::draw() {
     transform.transformGL();
     model.drawFaces();
     transform.restoreTransformGL();
-
-    material.begin();
-    {
-        collider->draw();
-    }
-    material.end();
 }

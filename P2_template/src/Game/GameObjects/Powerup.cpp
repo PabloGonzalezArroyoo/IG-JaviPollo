@@ -1,5 +1,6 @@
 #include "Powerup.h"
 #include "Player.h"
+#include "Game.h"
 
 Powerup::Powerup(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     model.loadModel("../../resources/models/powerup.FBX");
@@ -19,5 +20,6 @@ void Powerup::draw() {
 
 void Powerup::receiveCarCollision(Player* car) {
     car->boost(2);
+    game->playSound(POWERUP);
     this->kill();
 }

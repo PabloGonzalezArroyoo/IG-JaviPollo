@@ -10,6 +10,8 @@ MenuState::MenuState(Game* game) : State(game, "Menu State"), alpha(255), change
     title.load("../../resources/fonts/diesel.ttf", 150);
     titleShadow.load("../../resources/fonts/diesel.ttf", 150);
     pressStart.load("../../resources/fonts/diesel.ttf", 70);
+
+    game->playMusic(MENU);
 };
 
 void MenuState::update(){
@@ -48,6 +50,8 @@ void MenuState::draw(){
 };
 
 void MenuState::keyPressed(int key) {
-    if (key == ' ')
+    if (key == ' ') {
+        game->stopMusic(MENU);
         game->getGameStateMachine()->pushState(new PlayState(game));
+    }    
 }

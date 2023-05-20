@@ -18,8 +18,37 @@ Game::Game(){
     speed.loadFont("../../resources/fonts/aldo.ttf", 30);
     coins.loadFont("../../resources/fonts/aldo.ttf", 30);
     timerF.loadFont("../../resources/fonts/aldo.ttf", 30);
+    
+    // SONIDOS
+    ofSoundPlayer coin;
+    ofSoundPlayer explosion;
+    ofSoundPlayer hole;
+    ofSoundPlayer oil;
+    ofSoundPlayer powerup;
+    ofSoundPlayer shoot;
+    ofSoundPlayer soil;
+    ofSoundPlayer arch;
+    ofSoundPlayer train;
 
-    coin.load("../../resources/sounds/coin.wav");
+    coin.load("../../resources/sounds/coin.wav"); sounds.push_back(coin);
+    explosion.load("../../resources/sounds/explosion.mp3"); sounds.push_back(explosion);
+    hole.load("../../resources/sounds/hole.wav"); sounds.push_back(hole);
+    oil.load("../../resources/sounds/oil.wav"); sounds.push_back(oil);
+    powerup.load("../../resources/sounds/powerup.wav"); sounds.push_back(powerup);
+    shoot.load("../../resources/sounds/shoot.wav"); sounds.push_back(shoot);
+    soil.load("../../resources/sounds/soil.wav"); sounds.push_back(soil);
+    arch.load("../../resources/sounds/arch.mp3"); sounds.push_back(arch);
+    train.load("../../resources/sounds/train.mp3"); sounds.push_back(train);
+
+    // MÚSICA
+    ofSoundPlayer menu;
+    ofSoundPlayer playstate;
+    ofSoundPlayer pause;
+    ofSoundPlayer results;
+    menu.load("../../resources/music/menu.mp3"); menu.setLoop(true); musics.push_back(menu);
+    playstate.load("../../resources/music/playstate.mp3"); playstate.setLoop(true); playstate.setVolume(0.7); musics.push_back(playstate);
+    pause.load("../../resources/music/pause.mp3"); pause.setLoop(true); musics.push_back(pause);
+    results.load("../../resources/music/results.mp3"); results.setLoop(true); musics.push_back(results);
 }
 
 Game::~Game(){
@@ -131,8 +160,8 @@ void Game::toggleDebug(){
     bDebug = !bDebug;
 }
 
-void Game::playerWins() {
-    win = true;
+void Game::playerWins(bool w) {
+    win = w;
 }
 
 float Game::getEllapsedTime(){

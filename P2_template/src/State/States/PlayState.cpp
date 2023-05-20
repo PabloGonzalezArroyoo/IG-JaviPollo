@@ -5,6 +5,8 @@
 
 PlayState::PlayState(Game *game) : State(game, "Play State"){
     game->init();
+
+    game->playMusic(PLAYSATE);
 };
 
 void PlayState::update(){
@@ -45,6 +47,7 @@ void PlayState::keyPressed(int key){
     if(key == ' ')
         if (game->getPlayer()->getCoins() > 0) game->getPlayer()->shoot();
     if (key == 'p') {
+        game->pauseMusic(PLAYSATE, true);
         game->getGameStateMachine()->pushState(new PauseState(game));
     }
 }

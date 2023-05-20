@@ -1,5 +1,6 @@
 #include "Soil.h"
 #include "Player.h"
+#include "Game.h"
 
 Soil::Soil(Game* game, glm::vec3 pos, glm::vec3 dim) : GameObject(game, pos, dim) {
     plane.setParent(transform);
@@ -15,6 +16,7 @@ Soil::~Soil() { }
 
 void Soil::receiveCarCollision(Player* car) {
     car->setSoiled();
+    game->playSound(SOIL);
 }
 
 void Soil::draw() {

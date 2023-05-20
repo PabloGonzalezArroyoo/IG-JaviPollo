@@ -10,9 +10,9 @@ public:
     
     ~ResultState();
     
-    void update();
-    void draw();
-        
+    virtual void update();
+    virtual void draw();
+    virtual void keyPressed(int key);
 };
 
 #endif /* ResultState_h */

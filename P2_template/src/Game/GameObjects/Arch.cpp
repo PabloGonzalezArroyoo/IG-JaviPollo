@@ -1,5 +1,6 @@
 #include "Arch.h"
 #include "Player.h"
+#include "Game.h"
 
 Arch::Arch(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim), coinsNumber(0), timer(0) {
     material.setEmissiveColor(ofColor::cornflowerBlue);
@@ -18,6 +19,7 @@ Arch::~Arch() { }
 
 void Arch::receiveCarCollision(Player* car) {
     car->addCoins(coinsNumber);
+    game->playSound(ARCH);
     this->kill();
 }
 

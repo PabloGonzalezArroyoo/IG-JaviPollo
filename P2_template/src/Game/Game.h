@@ -7,6 +7,14 @@
 #include "GameObjectGenerator.h"
 #include "GameStateMachine.h"
 
+enum SOUNDS {
+    COIN, EXPLOSION, HOLE, OIL, POWERUP, SHOOT, SOIL, ARCH, TRAIN
+};
+
+enum MUSICS {
+    MENU, PLAYSATE, PAUSE, RESULTS
+};
+
 class Player;
 
 class Game : public StateMachine{
@@ -28,7 +36,8 @@ class Game : public StateMachine{
     ofTrueTypeFont timerF;
 
 
-    ofSoundPlayer coin;
+    vector<ofSoundPlayer> sounds;
+    vector<ofSoundPlayer> musics;
     
 public:    
     Game();
@@ -37,7 +46,7 @@ public:
     void update();
     void draw();
     void toggleDebug();
-    void playerWins();
+    void playerWins(bool w);
 
     void drawHUD();
     string twoDecimalFloatString(float f);
@@ -52,6 +61,12 @@ public:
     inline GameStateMachine* getGameStateMachine() { return gsm; }
     
     // Sonidos
-    inline void coinSound() { coin.play(); }
+    inline void playSound(int s) {
+        if (s == SHOOT) sounds[s].play();
+        else if (!sounds[s].isPlaying()) sounds[s].play();
+    }
+    inline void playMusic(int m) { musics[m].play(); }
+    inline void stopMusic(int m) { musics[m].stop(); }
+    inline void pauseMusic(int m, bool b) { musics[m].setPaused(b); }
 };
 #endif

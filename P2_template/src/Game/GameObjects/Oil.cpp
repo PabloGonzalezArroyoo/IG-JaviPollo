@@ -1,5 +1,6 @@
 #include "Oil.h"
 #include "Player.h"
+#include "Game.h"
 
 Oil::Oil(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     plane.setParent(transform);
@@ -11,15 +12,15 @@ Oil::Oil(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     ofLoadImage(texture, "../../resources/images/oil.png");
 }
 
+Oil::~Oil() { }
+
 void Oil::draw() {
     texture.bind();
     plane.draw();
     texture.unbind();
 }
 
-Oil::~Oil() { }
-
 void Oil::receiveCarCollision(Player* car) {
     car->setOiled();
+    game->playSound(OIL);
 }
-

@@ -5,7 +5,7 @@
 Bullet::Bullet(Game *game, ofNode otherTransform)
     :GameObject(game, otherTransform.getGlobalPosition(), vec3(20)), timer(0)
 {
-        transform.setGlobalOrientation(otherTransform.getGlobalOrientation());
+    transform.setGlobalOrientation(otherTransform.getGlobalOrientation());
     material.setEmissiveColor(ofColor::red);
     model.loadModel("../../resources/models/bullet.fbx");
     model.setScale(0.1, 0.1, 0.1);

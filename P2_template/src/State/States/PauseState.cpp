@@ -14,11 +14,11 @@ PauseState::PauseState(Game* game) : State(game, "Pause State") {
     // Cargar fuente
     pause.load("../../resources/fonts/diesel.ttf", 150);
     controls.load("../../resources/fonts/diesel.ttf", 40);
+
+    game->playMusic(PAUSE);
 };
 
-void PauseState::update() {
-
-};
+void PauseState::update() { };
 
 void PauseState::draw() {
     ofBackground(0);
@@ -52,6 +52,8 @@ void PauseState::draw() {
 
 void PauseState::keyPressed(int key) {
     if (key == 'p') {
+        game->stopMusic(PAUSE);
+        game->pauseMusic(PLAYSATE, false);
         game->getGameStateMachine()->popState();
     }
 }
