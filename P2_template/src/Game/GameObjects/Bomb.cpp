@@ -1,8 +1,10 @@
 #include "Bomb.h"
 #include "Player.h"
 #include "Game.h"
+#include "Airplane.h"
 
-Bomb::Bomb(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
+Bomb::Bomb(Game* game, vec3 pos, vec3 dim, Airplane* pg) : GameObject(game, pos, dim), active(false),
+    generator(pg) {
     material.setEmissiveColor(ofColor::paleVioletRed);
     model.loadModel("../../resources/models/tnt.fbx");
     model.setScale(0.1, 0.1, 0.1);
@@ -15,21 +17,34 @@ Bomb::~Bomb() { }
 void Bomb::receiveCarCollision(Player* car) {
     car->setToInitPos();
     game->playSound(EXPLOSION);
-    this->kill();
+    deactivateBomb();
+    notifyGenerator();
 }
 
 void Bomb::update() {
-    transform.move(transform.getYAxis() * -speed);
+    if (active) {
+        transform.move(transform.getYAxis() * -speed);
 
-    if (transform.getPosition().y < 0) {
-        this->kill();
-        auto explosion = new Explosion(game, transform.getPosition(), EXPLOSIONS_DIMS);
-        game->addGameObject(explosion);
+        if (transform.getPosition().y < 0) {
+            generator->createExplosion(transform.getPosition());
+            deactivateBomb();
+        }
     }
 }
 
 void Bomb::draw() {
-    transform.transformGL();
-    model.drawFaces();
-    transform.restoreTransformGL();
+    if (active) {
+        transform.transformGL();
+        model.drawFaces();
+        transform.restoreTransformGL();
+    }
+}
+
+void Bomb::deactivateBomb() {
+    setPosition(vec3(0, 10000, 0));
+    setActive(false);
+}
+
+void Bomb::notifyGenerator() {
+    if (generator != nullptr) generator->setGenerate();
 }

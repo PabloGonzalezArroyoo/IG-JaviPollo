@@ -2,6 +2,7 @@
 
 #include "GameObject.h"
 #include "Bomb.h"
+#include "Explosion.h"
 
 #include "ofxAssimpModelLoader.h"
 
@@ -11,7 +12,10 @@ private:
 
 	float speed = -5;
 	bool bTurned;
+	bool canGenerate;
 
+	Bomb* bomb;
+	Explosion* explosion;
 	ofxAssimpModelLoader model;
 
 public:
@@ -20,6 +24,10 @@ public:
 
 	virtual void update();
 	virtual void draw();
-	void receiveCarCollision(Player* car) override;
 	void turn();
+
+	void generateBombs();
+
+	inline void setGenerate() { canGenerate = true; }
+	void createExplosion(vec3 pos);
 };
