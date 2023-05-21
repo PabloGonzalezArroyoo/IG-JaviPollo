@@ -13,7 +13,7 @@ Explosion::Explosion(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim
 Explosion::~Explosion() { }
 
 void Explosion::receiveCarCollision(Player* car) {
-    //car->transform.rotate(180, 0, 0, 0);
+    car->transform.rotate(180, 0, 1, 0);
     game->playSound(EXPLOSION);
     this->kill();
 }

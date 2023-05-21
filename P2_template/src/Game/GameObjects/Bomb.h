@@ -6,7 +6,7 @@
 
 class Bomb : public GameObject {
 private:
-	int speed = 2;
+	int speed = 6;
 
 	ofxAssimpModelLoader model;
 

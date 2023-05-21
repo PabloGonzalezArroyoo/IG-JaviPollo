@@ -30,7 +30,7 @@ void Airplane::update() {
 
     timer += ofGetLastFrameTime();
 
-    if (timer > 3) {
+    if (timer > 1.8) {
         auto bomb = new Bomb(game, transform.getPosition(), BOMBS_DIMS);
         game->addGameObject(bomb);
         timer = 0;

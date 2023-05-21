@@ -3,6 +3,8 @@
 using namespace glm;
 using namespace std;
 
+const int NUM_OF_OBJECTS = 26; // número real: n - 1
+
 // ROAD
 const int ROAD_WIDTH = 2000;
 const int ROAD_LENGTH = 100000;

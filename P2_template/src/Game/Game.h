@@ -64,6 +64,8 @@ public:
 
     inline GameStateMachine* getGameStateMachine() { return gsm; }
     
+    inline string getTimer() { return twoDecimalFloatString(timer); }
+
     // Sonidos y música
     inline void playSound(int s) {
         if (s == SHOOT) sounds[s].play();

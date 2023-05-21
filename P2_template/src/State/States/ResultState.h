@@ -9,10 +9,13 @@ private:
     // Textos
 	string titleTxt;
 	string startTxt;
+	string timerTxt;
 	string pointsTxt;
 
     ofTrueTypeFont title;
+    ofTrueTypeFont titleShadow;
     ofTrueTypeFont points;
+    ofTrueTypeFont time;
     ofTrueTypeFont pressStart;
 
 public:

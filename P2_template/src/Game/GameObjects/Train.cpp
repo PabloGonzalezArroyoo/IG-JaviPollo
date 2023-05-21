@@ -13,7 +13,7 @@ Train::Train(Game* game, glm::vec3 pos, glm::vec3 dim, TrainGenerator* pg) : Gam
     model.setScale(0.8, 0.8, 0.8);
 
     transform.rotateDeg(90, 0, 1, 0);
-    speed = 30;
+    speed = 35;
 }
 
 Train::~Train() { }
@@ -54,6 +54,7 @@ void Train::receiveBulletCollision(GameObject* bullet) {
         deactivateTrain();
         game->getPlayer()->addCoins(1000);
     }
+    game->playSound(TRAIN);
     bullet->kill();    
 };
 

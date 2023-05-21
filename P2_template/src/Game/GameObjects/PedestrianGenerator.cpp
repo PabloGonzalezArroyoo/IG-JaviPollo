@@ -19,7 +19,7 @@ void PedestrianGenerator::generatePedestrians() {
 void PedestrianGenerator::update() {
     if (canGenerate) time += ofGetLastFrameTime();
 
-    if (time > 3) {
+    if (time > 2.5) {
         generatePedestrians();
         time = 0;
     }

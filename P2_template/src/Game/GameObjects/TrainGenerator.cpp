@@ -19,7 +19,7 @@ void TrainGenerator::generateTrains() {
 void TrainGenerator::update() {
     if (canGenerate) time += ofGetLastFrameTime();
 
-    if (time > 3) {
+    if (time > 2.5) {
         generateTrains();
         time = 0;
     }

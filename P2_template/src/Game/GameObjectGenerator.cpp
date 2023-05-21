@@ -51,16 +51,17 @@ void GameObjectGenerator::generateWorld(){
     int randomFactor = 0;
 
     // Generación aleatoria
-    for (int i = 0; i < 25; i++) {
-        // Moneda
-        generateRandoms(i, randomX, randomZ, randomFactor);
-        auto coin = new Coin(game, vec3(randomX, -25, randomZ), COINS_DIMS);
-        game->addGameObject(coin);
+    for (int i = 1; i < NUM_OF_OBJECTS; i++) {
+        if (i != NUM_OF_OBJECTS / 2) {
+            // Moneda
+            generateRandoms(i, randomX, randomZ, randomFactor);
+            auto coin = new Coin(game, vec3(randomX, -25, randomZ), COINS_DIMS);
+            game->addGameObject(coin);
 
-        int random = rand() % 12;
-        GameObject* gObj;
+            int random = rand() % 12;
+            GameObject* gObj;
 
-        switch (random) {
+            switch (random) {
             case 0:
                 // Obstáculo
                 generateRandoms(i, randomX, randomZ, randomFactor);
@@ -116,10 +117,12 @@ void GameObjectGenerator::generateWorld(){
                 generateRandoms(i, randomX, randomZ, randomFactor);
                 gObj = new TrainGenerator(game, vec3(ROAD_WIDTH / 2 - 100, -25, randomZ));
                 break;
+            }
+            game->addGameObject(gObj);
         }
-        game->addGameObject(gObj);
     }
 
+    // Checkpoint
     auto checkpoint = new Checkpoint(game, vec3(0, 0, ROAD_LENGTH / 2), vec3(ROAD_WIDTH, ROAD_WIDTH, 100));
     game->addGameObject(checkpoint);
 }
@@ -130,5 +133,5 @@ void GameObjectGenerator::generateRandoms(int i, int& ranX, int& ranY, int& fact
     else fact = -1;
 
     ranX = (rand() % (ROAD_WIDTH / 2 - 150)) * fact;
-    ranY = ((ROAD_LENGTH / 26 * i) + rand() % 200 + 1);
+    ranY = ((ROAD_LENGTH / NUM_OF_OBJECTS * i) + rand() % 200 + 1);
 }
