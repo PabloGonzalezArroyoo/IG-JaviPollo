@@ -1,0 +1,4 @@
+- Extensiones:
+1. Powerup: un objeto que al colisionar te proporciona un acelerón, al igual que los champiñones del Mario Kart.
+2. Trenes: un tren que pasa de un lado al otro del circuito rápidamente cada X tiempo, como el pedestrian pero más grande, rápido y con 3 puntos de vida para destruirlo. 
+3. Checkpoint: un halo de luz alargado que se encuentra a mitad del recorrido y, de haber pasado por él y después colisionar con un objeto que te devuelve al inicio del mapa, te devuelve a la posición de este.

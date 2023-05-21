@@ -6,7 +6,7 @@ Crane::Crane(Game* game, vec3 pos, vec3 dim) : GameObject(game, pos, dim) {
     material.setEmissiveColor(ofColor::lawnGreen);
     vec3 sujPos = pos + vec3(0, dim.y / 2, 0);
     sujecion = new GameObject(game, sujPos, vec3(dim.y, dim.x - 30, dim.z));
-    gancho = new Claw(game, sujPos + vec3(dim.y / 2 - 40, -dim.y / 2 + 90, 0), vec3(50, dim.y - 250, 50));
+    gancho = new Claw(game, sujPos + vec3(dim.y / 2 - 40, -dim.y / 2 + 90, 0), vec3(50, dim.y - 200, 50));
     game->addGameObject(gancho);
 }
 Crane::~Crane() {}

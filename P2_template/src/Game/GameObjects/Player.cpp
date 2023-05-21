@@ -2,7 +2,7 @@
 #include "Game.h"
 #include "Bullet.h"
 
-Player::Player(Game *game) : GameObject(game, vec3(100)), oiled(false), oilTime(0), auxFactor(1), turnTime(0),
+Player::Player(Game *game) : GameObject(game, vec3(200)), oiled(false), oilTime(0), auxFactor(1), turnTime(0),
     soiled(false) {
     
     material.setDiffuseColor(ofColor::blue);

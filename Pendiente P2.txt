@@ -1,6 +1,0 @@
-- Animación del arco loco
-- Las 3 extensiones
-	+ Powerup (boost temporal)
-	+ Tren (vías por donde pasa un tren)
-	+ Semáforo (si está en rojo y te lo pasas: multa)
-- Ponerlo bonito (sonidos, menú, ilumminación, guardar record)

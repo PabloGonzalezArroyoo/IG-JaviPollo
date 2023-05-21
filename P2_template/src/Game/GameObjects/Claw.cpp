@@ -14,7 +14,7 @@ void Claw::update() {
     pos = collider->getPosition();
 
     if (pos.y >= initYPos + 50) speed = -1;
-    else if (pos.y == initYPos - 170) speed = 1;
+    else if (pos.y == initYPos - 200) speed = 1;
 }
 
 void Claw::draw() {
